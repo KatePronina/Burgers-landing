@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'lifehackmedium';
+    src: url('../fonts/lifehack_medium-webfont.woff2') format('woff2'),
+         url('../fonts/lifehack_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntubold';
+    src: url('../fonts/ubuntu-b-webfont.woff2') format('woff2'),
+         url('../fonts/ubuntu-b-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntulight';
+    src: url('../fonts/ubuntu-light-webfont.woff2') format('woff2'),
+         url('../fonts/ubuntu-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntumedium';
+    src: url('../fonts/ubuntu-medium-webfont.woff2') format('woff2'),
+         url('../fonts/ubuntu-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubunturegular';
+    src: url('../fonts/ubuntu-regular-webfont.woff2') format('woff2'),
+         url('../fonts/ubuntu-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gagalinregular';
+    src: url('../fonts/gagalin-regular-webfont.woff2') format('woff2'),
+         url('../fonts/gagalin-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*STYLES FOR SCROLL*/
+
+.scroll-bar {
+	position: fixed;
+	right: 170px;
+	top: 100px;
+}
+.scroll-bar__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.scroll-bar__list li {
+	width: 16px;
+	height: 16px;
+	margin-bottom: 7px;
+}
+.scroll-bar__item {
+	display: block;
+	padding: 5px;
+	margin: 0;
+	background-clip: content-box;
+
+	background-color: #ffffff;
+	color: red;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+}
+.scroll-bar__item--active,
+.scroll-bar__item:hover {
+	border: 1px solid #ffffff;
+	padding: 4px;
+}
+
+/*STYLES FOR 1ST SECTION*/
+
+.first-screen {
+	background-color: #000000;
+	color: #ffffff;
+	background-image: url('../img/header-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	height: 650px;
+}
+.first-screen__container {
+	width: 960px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+.header {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: row;
+}
+.header__menu {
+	width: 625px;
+	margin-left: 235px;
+}
+.header__nav {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	margin-top: 20px;
+	padding: 0;
+	list-style: none;
+}
+.header__menu-item {
+	font-family: 'ubuntumedium', sans-serif;
+	font-size: 13px;
+	line-height: 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.header__nav li {
+	position: relative;
+}
+.header__nav li::before {
+	position: absolute;
+	top: 13px;
+	left: -20px;
+
+	content: '';
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #ffffff;
+}
+.header__nav li:first-child::before,
+.header__nav li:last-child::before {
+	display: none;
+}
+.header__menu-item-oder {
+	padding: 10px 15px;
+	margin-left: -15px;
+	background-color: #e45028;
+	border-radius: 5px;
+	transition: 0.2s;
+}
+.header__menu-item-oder:hover {
+	background-color: #c1401e;
+}
+.main-content {
+	display: flex;
+}
+.main-content__text {
+	width: 425px;
+	margin-top: 135px;
+	margin-left: 10px;
+}
+.main-content__text-first {
+	font-family: 'gagalinregular', sans-serif;
+	font-size: 72px;
+	line-height: 85px;
+	color: #f9b43b;
+
+	display: block;
+	margin-bottom: 10px;
+}
+.main-content__text-second {
+	font-family: 'lifehackmedium', sans-serif;
+	font-size: 65px;
+	line-height: 85px;
+	color: #ffffff;
+}
+.scroll-down {
+	display: flex;
+	justify-content: center;
+	margin-top: 95px;
+}
