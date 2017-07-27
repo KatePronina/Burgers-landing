@@ -1,0 +1,323 @@
+@font-face {
+    font-family: 'lifehackmedium';
+    src: url('../fonts/lifehack_medium-webfont.woff2') format('woff2'),
+         url('../fonts/lifehack_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntubold';
+    src: url('../fonts/ubuntu-b-webfont.woff2') format('woff2'),
+         url('../fonts/ubuntu-b-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntulight';
+    src: url('../fonts/ubuntu-light-webfont.woff2') format('woff2'),
+         url('../fonts/ubuntu-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntumedium';
+    src: url('../fonts/ubuntu-medium-webfont.woff2') format('woff2'),
+         url('../fonts/ubuntu-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubunturegular';
+    src: url('../fonts/ubuntu-regular-webfont.woff2') format('woff2'),
+         url('../fonts/ubuntu-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gagalinregular';
+    src: url('../fonts/gagalin-regular-webfont.woff2') format('woff2'),
+         url('../fonts/gagalin-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*STYLES FOR SCROLL*/
+
+
+.scroll-bar {
+	position: fixed;
+	right: 100px;
+	top: 100px;
+
+	z-index: 10;
+}
+.scroll-bar__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.scroll-bar__list li {
+	width: 16px;
+	height: 16px;
+	margin-bottom: 7px;
+}
+.scroll-bar__item {
+	display: block;
+	padding: 5px;
+	margin: 0;
+	background-clip: content-box;
+
+	background-color: #ffffff;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+}
+.scroll-bar__item--active,
+.scroll-bar__item:hover {
+	border: 1px solid #ffffff;
+	padding: 4px;
+}
+
+
+/*STYLES FOR 1ST SECTION*/
+
+
+.first-screen {
+	background-color: #000000;
+	color: #ffffff;
+	background-image: url('../img/header-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	height: 650px;
+
+	&__container {
+		width: 960px;
+		margin: 0 auto;
+		padding-top: 10px;
+	}
+}
+.header {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: row;
+}
+.header__menu {
+	width: 625px;
+	margin-left: 235px;
+}
+.header__nav {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	margin-top: 20px;
+	padding: 0;
+	list-style: none;
+}
+.header__menu-item {
+	font-family: ubuntumedium, sans-serif;
+	font-size: 13px;
+	line-height: 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.header__nav li {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		top: 13px;
+		left: -20px;
+
+		content: '';
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background-color: #ffffff;
+	}
+
+	&:first-child::before,
+	&:last-child::before {
+		display: none;
+	}
+}
+.header__menu-item-oder {
+	padding: 10px 15px;
+	margin-left: -15px;
+	background-color: #e45028;
+	border-radius: 5px;
+	transition: 0.2s;
+
+	&:hover {
+		background-color: #c1401e;
+	};
+}
+.main-content {
+	display: flex;
+}
+.main-content__text {
+	width: 425px;
+	margin-top: 130px;
+	margin-left: 40px;
+}
+
+$orange: #f9b43b;
+
+
+@mixin title($title-color) {
+	font-family: gagalinregular, sans-serif;
+	font-size: 72px;
+	color: $title-color;
+}
+
+.main-content__text-first {
+	@include title($orange);
+
+	line-height: 85px;
+	display: block;
+	margin-bottom: 8px;
+}
+.main-content__text-second {
+	font-family: lifehackmedium, sans-serif;
+	font-size: 65px;
+	line-height: 70px;
+	color: #ffffff;
+}
+.scroll-down {
+	display: flex;
+	justify-content: center;
+	margin-top: 95px;
+}
+
+
+/*STYLES FOR ADVANTAGES SECTION*/
+
+
+.advantages {
+	height: 650px;
+	background-color: #f5f2ed;
+	background-image: url("../img/advantages-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #2f3234;
+
+	$width: 933px;
+
+	&__container {
+		width: $width;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__title {
+		margin: 0;
+		padding-top: 70px;
+		
+		@include title(#2f3234);
+		line-height: 1.3;
+	}
+	&__list {
+		width: $width;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 75px;
+	}
+	&__item {
+		width: 292px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__item-name {
+		display: block;
+		margin-top: 30px;
+
+		font-family: lifehackmedium;
+		font-size: 24px;
+		line-height: 28px;
+		text-align: center;
+	}
+	&__item-description {
+		font-family: ubuntulight;
+		font-size: 14px;
+		line-height: 24px;
+		text-align: center;
+	}
+}
+
+
+/*STYLES FOR FEEDBACK SECTION*/
+
+
+.feedback {
+	height: 650px;
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item{
+		width: 25%;
+		height: 325px;
+		background-size: cover;
+		background-position: center;
+
+		position: relative;
+		color: #ffffff;
+	}
+	&__item-content {
+		opacity: 0;
+		position: absolute;
+		content: '';
+		height: 325px;
+		top: 0;
+		left: 0;
+		padding-top: 40px;
+		padding-left: 20px;
+		padding-right: 30px;
+		padding-bottom: 50px;
+		box-sizing: border-box;
+
+		background-color: rgba(0, 0, 0, .5);
+
+		transform: scale(0.8);
+		transition: .2s;
+
+		&:hover {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	&__item-name {
+		font-family: gagalinregular;
+		font-size: 14px;
+		line-height: 28px;
+	}
+	&__item-text {
+		font-family: ubuntulight;
+		font-size: 14px;
+		line-height: 24px;
+	}
+	&__item-more {
+		font-family: ubuntumedium;
+		font-size: 13px;
+		line-height: 30px;
+		background-color: #2f3234;
+		border-radius: 5px;
+		color: #ffffff;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 10px 15px;
+	}
+}
+@each $number in (-1, -2, -3, -4, -5, -6, -7, -8) {
+	.feedback__item#{$number} {
+		background-image: url("../img/feedback__item#{$number}.jpg");
+	}
+}
