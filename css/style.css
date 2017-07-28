@@ -225,6 +225,7 @@
     line-height: 28px;
     text-align: center; }
   .advantages__item-description {
+    width: 292px;
     font-family: ubuntulight;
     font-size: 14px;
     line-height: 24px;
@@ -241,7 +242,7 @@
       flex-wrap: wrap; }
   .feedback__item {
     width: 25%;
-    height: 325px;
+    min-height: 325px;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -250,7 +251,7 @@
     opacity: 0;
     position: absolute;
     content: '';
-    height: 325px;
+    height: 100%;
     top: 0;
     left: 0;
     padding-top: 40px;
