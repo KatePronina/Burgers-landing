@@ -87,7 +87,10 @@
 
 /*STYLES FOR 1ST SECTION*/
 
-
+@mixin section-height {
+	min-height: 650px;
+	height: 100vh;
+}
 .first-screen {
 	background-color: #000000;
 	color: #ffffff;
@@ -95,7 +98,8 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	height: 650px;
+
+	@include section-height;
 
 	&__container {
 		width: 960px;
@@ -201,7 +205,7 @@ $orange: #f9b43b;
 
 
 .advantages {
-	height: 650px;
+	@include section-height;
 	background-color: #f5f2ed;
 	background-image: url("../img/advantages-bg.jpg");
 	background-repeat: no-repeat;
@@ -258,7 +262,7 @@ $orange: #f9b43b;
 
 
 .feedback {
-	height: 650px;
+	@include section-height;
 	display: flex;
 	flex-wrap: wrap;
 

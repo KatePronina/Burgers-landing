@@ -67,7 +67,8 @@
   background-image: url("../img/header-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 650px; }
+  min-height: 650px;
+  height: 100vh; }
   .first-screen__container {
     width: 960px;
     margin: 0 auto;
@@ -168,7 +169,8 @@
 
 /*STYLES FOR ADVANTAGES SECTION*/
 .advantages {
-  height: 650px;
+  min-height: 650px;
+  height: 100vh;
   background-color: #f5f2ed;
   background-image: url("../img/advantages-bg.jpg");
   background-repeat: no-repeat;
@@ -230,7 +232,8 @@
 
 /*STYLES FOR FEEDBACK SECTION*/
 .feedback {
-  height: 650px;
+  min-height: 650px;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
