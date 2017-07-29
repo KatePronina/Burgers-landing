@@ -3,32 +3,44 @@
   src: url("../fonts/lifehack_medium-webfont.woff2") format("woff2"), url("../fonts/lifehack_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+
 @font-face {
-  font-family: 'ubuntubold';
+  font-family: 'ubuntu';
   src: url("../fonts/ubuntu-b-webfont.woff2") format("woff2"), url("../fonts/ubuntu-b-webfont.woff") format("woff");
-  font-weight: normal;
+  font-weight: 900;
   font-style: normal; }
+
 @font-face {
-  font-family: 'ubuntulight';
+  font-family: 'ubuntu';
   src: url("../fonts/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu-light-webfont.woff") format("woff");
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal; }
+
 @font-face {
-  font-family: 'ubuntumedium';
+  font-family: 'ubuntu';
   src: url("../fonts/ubuntu-medium-webfont.woff2") format("woff2"), url("../fonts/ubuntu-medium-webfont.woff") format("woff");
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal; }
+
 @font-face {
-  font-family: 'ubunturegular';
+  font-family: 'ubuntu';
   src: url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.woff") format("woff");
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal; }
+
 @font-face {
   font-family: 'gagalinregular';
   src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-/*STYLES FOR SCROLL*/
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #2f3234;
+  line-height: 1.4; }
+
+/*sections*/
 .scroll-bar {
   position: fixed;
   right: 100px;
@@ -54,13 +66,10 @@
   width: 6px;
   height: 6px;
   border-radius: 50%; }
+  .scroll-bar__item--active, .scroll-bar__item:hover {
+    border: 1px solid #ffffff;
+    padding: 4px; }
 
-.scroll-bar__item--active,
-.scroll-bar__item:hover {
-  border: 1px solid #ffffff;
-  padding: 4px; }
-
-/*STYLES FOR 1ST SECTION*/
 .first-screen {
   background-color: #000000;
   color: #ffffff;
@@ -76,15 +85,18 @@
 
 .header {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row; }
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
 
 .header__menu {
   width: 625px;
@@ -92,37 +104,41 @@
 
 .header__nav {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin: 0;
   margin-top: 20px;
   padding: 0;
   list-style: none; }
+  .header__nav li {
+    position: relative; }
+    .header__nav li::before {
+      position: absolute;
+      top: 13px;
+      left: -20px;
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #ffffff; }
+    .header__nav li:first-child::before, .header__nav li:last-child::before {
+      display: none; }
 
 .header__menu-item {
-  font-family: ubuntumedium, sans-serif;
+  font-family: ubuntu, sans-serif;
+  font-weight: 700;
   font-size: 13px;
   line-height: 30px;
   text-decoration: none;
   text-transform: uppercase;
   color: #ffffff; }
-
-.header__nav li {
-  position: relative; }
-  .header__nav li::before {
-    position: absolute;
-    top: 13px;
-    left: -20px;
-    content: '';
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background-color: #ffffff; }
-  .header__nav li:first-child::before, .header__nav li:last-child::before {
-    display: none; }
+  .header__menu-item:hover {
+    text-decoration: underline; }
 
 .header__menu-item-oder {
   padding: 10px 15px;
@@ -130,12 +146,15 @@
   background-color: #e45028;
   border-radius: 5px;
   -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s; }
   .header__menu-item-oder:hover {
-    background-color: #c1401e; }
+    background-color: #c13c18;
+    text-decoration: none; }
 
 .main-content {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
 
@@ -160,14 +179,15 @@
 
 .scroll-down {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin-top: 95px; }
 
-/*STYLES FOR ADVANTAGES SECTION*/
 .advantages {
   min-height: 650px;
   height: 100vh;
@@ -176,47 +196,59 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: #2f3234; }
-  .advantages__container {
-    width: 933px;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-  .advantages__title {
-    margin: 0;
-    padding-top: 70px;
-    font-family: gagalinregular, sans-serif;
-    font-size: 72px;
-    color: #2f3234;
-    line-height: 1.3; }
-  .advantages__list {
-    width: 933px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-top: 75px; }
-  .advantages__item {
-    width: 292px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+
+.advantages__container {
+  width: 933px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.advantages__title {
+  margin: 0;
+  padding-top: 70px;
+  font-family: gagalinregular, sans-serif;
+  font-size: 72px;
+  color: #2f3234;
+  line-height: 1.3; }
+
+.advantages__list {
+  width: 933px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 75px; }
+
+.advantages__item {
+  width: 292px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
   .advantages__item-name {
     display: block;
     margin-top: 30px;
@@ -226,67 +258,81 @@
     text-align: center; }
   .advantages__item-description {
     width: 292px;
-    font-family: ubuntulight;
+    font-family: ubuntu;
+    font-weight: 300;
     font-size: 14px;
     line-height: 24px;
     text-align: center; }
 
-/*STYLES FOR FEEDBACK SECTION*/
 .feedback {
   min-height: 650px;
   height: 100vh;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .feedback__item {
-    width: 25%;
-    min-height: 325px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    color: #ffffff; }
-  .feedback__item-content {
-    opacity: 0;
-    position: absolute;
-    content: '';
-    height: 100%;
-    top: 0;
-    left: 0;
-    padding-top: 40px;
-    padding-left: 20px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
-    -webkit-transition: .2s;
-    transition: .2s; }
-    .feedback__item-content:hover {
-      opacity: 1;
-      -webkit-transform: scale(1);
-              transform: scale(1); }
-  .feedback__item-name {
-    font-family: gagalinregular;
-    font-size: 14px;
-    line-height: 28px; }
-  .feedback__item-text {
-    font-family: ubuntulight;
-    font-size: 14px;
-    line-height: 24px; }
-  .feedback__item-more {
-    font-family: ubuntumedium;
-    font-size: 13px;
-    line-height: 30px;
-    background-color: #2f3234;
-    border-radius: 5px;
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 10px 15px; }
+  flex-wrap: wrap; }
+
+.feedback__item {
+  width: 25%;
+  min-height: 325px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #ffffff; }
+
+.feedback__item-content {
+  opacity: 0;
+  position: absolute;
+  content: '';
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s; }
+  .feedback__item-content:hover {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+
+.feedback__item-name {
+  font-family: gagalinregular;
+  font-size: 14px;
+  line-height: 28px; }
+
+.feedback__item-text {
+  font-family: ubuntu;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px; }
+
+.feedback__item-more {
+  font-family: ubuntu;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 30px;
+  background-color: #2f3234;
+  border-radius: 5px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 15px; }
+  .feedback__item-more:hover {
+    background-color: #1e2021; }
 
 .feedback__item-1 {
   background-image: url("../img/feedback__item-1.jpg"); }
@@ -311,5 +357,3 @@
 
 .feedback__item-8 {
   background-image: url("../img/feedback__item-8.jpg"); }
-
-/*# sourceMappingURL=style.css.map */

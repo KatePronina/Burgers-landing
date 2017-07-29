@@ -1,0 +1,70 @@
+.feedback {
+	@include section-height;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.feedback__item {
+	width: 25%;
+	min-height: 325px;
+	background-size: cover;
+	background-position: center;
+
+	position: relative;
+	color: #ffffff;
+}
+.feedback__item-content {
+	opacity: 0;
+	position: absolute;
+	content: '';
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding-top: 40px;
+	padding-left: 20px;
+	padding-right: 30px;
+	padding-bottom: 50px;
+	box-sizing: border-box;
+
+	background-color: rgba(0, 0, 0, .5);
+
+	transform: scale(0.8);
+	transition: .2s;
+
+	&:hover {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+.feedback__item-name {
+	font-family: gagalinregular;
+	font-size: 14px;
+	line-height: 28px;
+}
+.feedback__item-text {
+	font-family: ubuntu;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 24px;
+}
+.feedback__item-more {
+	font-family: ubuntu;
+	font-weight: 700;
+	font-size: 13px;
+	line-height: 30px;
+	background-color: #2f3234;
+	border-radius: 5px;
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px 15px;
+
+	&:hover {
+		background-color: darken(#2f3234, 7%);
+	}
+}
+@each $number in (-1, -2, -3, -4, -5, -6, -7, -8) {
+	.feedback__item#{$number} {
+		background-image: url("../img/feedback__item#{$number}.jpg");
+	}
+}

@@ -1,0 +1,12 @@
+@import "config/variables.scss";
+@import "config/mixins.scss";
+
+@import "layout/fonts.scss";
+@import "layout/base.scss";
+
+/*sections*/
+
+@import "sections/scroll.scss";
+@import "sections/main.scss";
+@import "sections/advantages.scss";
+@import "sections/feedback.scss";

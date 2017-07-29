@@ -1,0 +1,52 @@
+.advantages {
+	@include section-height;
+	background-color: #f5f2ed;
+	background-image: url("../img/advantages-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: $dark;
+}
+.advantages__container {
+	width: 933px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.advantages__title {
+	margin: 0;
+	padding-top: 70px;
+	
+	@include title($dark);
+	line-height: 1.3;
+}
+.advantages__list {
+	width: 933px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 75px;
+}
+.advantages__item {
+	width: 292px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&-name {
+		display: block;
+		margin-top: 30px;
+
+		font-family: lifehackmedium;
+		font-size: 24px;
+		line-height: 28px;
+		text-align: center;
+	}
+	&-description {
+		width: 292px;
+		font-family: ubuntu;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 24px;
+		text-align: center;
+	}
+}
