@@ -4,6 +4,7 @@
 }
 @mixin title($title-color) {
 	font-family: gagalinregular, sans-serif;
+	font-weight: normal;
 	font-size: 72px;
 	color: $title-color;
 }
