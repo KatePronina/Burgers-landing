@@ -1,0 +1,19 @@
+.delivery {
+	@include section-height;
+	background-image: url("../img/delivery-bg.jpg");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.delivery__title {
+	@include title($orange);
+	width: 100%;
+	margin: 0;
+	padding-top: 80px;
+	text-align: center;
+} 
+.delivery__form-part {
+	width: 464px;
+}
