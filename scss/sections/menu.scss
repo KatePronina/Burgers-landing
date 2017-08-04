@@ -29,7 +29,7 @@
 	width: 80px;
 	@include section-height;
 
-	&--active + .menu__description {
+	&_active + .menu__description {
 		display: block;
 	}
 }

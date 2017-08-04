@@ -19,6 +19,10 @@
 	align-items: flex-start;
 	flex-direction: row;
 }
+.header__logo {
+	width: 92px;
+	height: 69px;
+}
 .header__menu {
 	width: 625px;
 	margin-left: 235px;
@@ -71,6 +75,10 @@
 }
 .main-content {
 	display: flex;
+}
+.main-content__image {
+	width: 451px;
+	height: 420px;
 }
 .main-content__text {
 	width: 425px;

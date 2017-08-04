@@ -2,8 +2,6 @@
 	position: fixed;
 	right: 100px;
 	top: 100px;
-
-	z-index: 10;
 }
 .scroll-bar__list {
 	margin: 0;
@@ -26,7 +24,7 @@
 	height: 6px;
 	border-radius: 50%;
 
-	&--active,
+	&_active,
 	&:hover {
 		border: 1px solid #ffffff;
 		padding: 4px;

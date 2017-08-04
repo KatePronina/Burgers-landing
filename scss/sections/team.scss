@@ -44,15 +44,15 @@
 	}
 
 
-	&--active .team-content__acc-link {
+	&_active .team-content__acc-link {
 		color: $orange;
 	}
 
-	&--active .team-content__member { 
+	&_active .team-content__member { 
 		height: 102px;
 		overflow: visible;
 	}
-	&--active::before {
+	&_active::before {
 		transform: rotate(180deg);
 	}
 }
@@ -63,7 +63,7 @@
 	color: #ffffff;
 	text-decoration: none;
 
-	&--active {
+	&_active {
 		color: $orange;
 	}
 }
@@ -79,7 +79,7 @@
 	font-size: 14px;
 	line-height: 1.5;
 
-	&--active {
+	&_active {
 		height: 102px;
 		overflow: visible;
 	}
@@ -89,6 +89,8 @@
 }
 .team-content__member-img {
 	border-radius: 50%;
+	width: 100px;
+	height: 100px;
 }
 .team-content__member-title {
 	font-weight: 900;

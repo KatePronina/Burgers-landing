@@ -91,6 +91,49 @@
 	outline: none;
 	border: none;
 }
+.delivery__payment-input {
+	display: none;
+}
+.delivery__payment-label {
+	position: relative;
+	margin-right: 20px;
+	padding-left: 25px;
+
+	&::before {
+		position: absolute;
+		content: '';
+		top: 2px;
+		left: 0;
+		width: 15px;
+		height: 15px;
+		background-color: #ffffff;
+	}
+	&_radio::before {
+		@extend .delivery__payment-label::before;
+		border-radius: 50%;
+	}
+} 
+.delivery__payment-input:checked + .delivery__payment-label_box::after {
+	position: absolute;
+	content: '';
+	top: 5px;
+	left: 2px;
+	width: 11px;
+	height: 9px;
+	background-image: url("../img/checked.png");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.delivery__payment-input:checked + .delivery__payment-label_radio::after {
+	position: absolute;
+	content: '';
+	top: 6px;
+	left: 4px;
+	width: 7px;
+	height: 7px;
+	background-color: $red;
+	border-radius: 50%;
+}
 
 .delivery__order-btn {
 	@include order-btn;
