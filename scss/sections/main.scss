@@ -65,18 +65,9 @@
 		text-decoration: underline;
 	}
 }
-$red: #e45028;
 .header__menu-item-oder {
-	padding: 10px 15px;
+	@include order-btn;
 	margin-left: -15px;
-	background-color: $red;
-	border-radius: 5px;
-	transition: 0.2s;
-
-	&:hover {
-		background-color: darken($red, 10%);
-		text-decoration: none;
-	};
 }
 .main-content {
 	display: flex;

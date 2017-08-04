@@ -8,6 +8,17 @@
 	font-size: 72px;
 	color: $title-color;
 }
+@mixin order-btn {
+	padding: 10px 15px;
+	background-color: $red;
+	border-radius: 5px;
+	transition: 0.2s;
+
+	&:hover {
+		background-color: darken($red, 10%);
+		text-decoration: none;
+	};
+}
 @mixin team-margins {
 	margin-top: 80px;
 	margin-left: 80px;

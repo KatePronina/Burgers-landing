@@ -231,26 +231,66 @@
 		</div>
 	</section>
 	<section class="delivery">
-		<h1 class="delivery__title">Закажите доставку</h1>
-		<form action="#" class="delivery__form">
-			<div class="delivery__form-part">
-				<input type="text" id="name">
-				<input type="text" id="tel">
-				<input type="text" id="street">
-				<input type="text" id="house">
-				<input type="text" id="housing">
-				<input type="text" id="apartment">
-				<input type="text" id="floor">
-			</div>
-			<div class="delivery__form-part">
-				<textarea name="comment" id="comment" cols="30" rows="10"></textarea>
-				<input type="radio">
-				<input type="radio">
-				<input type="checkbox">
-				<button type="submit">Заказать</button>
-				<a href="#">Очистить</a>
-			</div>
-		</form>
+		<div class="delivery__container">
+			<h1 class="delivery__title">Закажите доставку</h1>
+			<form action="#" class="delivery__form">
+				<div class="delivery__form-part">
+					<div class="delivery__form-row">
+						<div class="delivery__input-block">
+							<label for="name" class="delivery__input-label">Имя</label>
+							<input type="text" id="name" class="delivery__form-input">
+						</div>
+						<div class="delivery__input-block">
+							<label for="tel" class="delivery__input-label">Телефон</label>	
+							<input type="text" id="tel" class="delivery__form-input">
+						</div>	
+					</div>
+					<div class="delivery__form-row">
+						<div class="delivery__input-block">
+							<label for="street" class="delivery__input-label">Улица</label>
+							<input type="text" id="street" class="delivery__form-input">
+						</div>	
+					</div>
+					<div class="delivery__form-row">
+						<div class="delivery__input-block">
+							<label for="house" class="delivery__input-label">Дом</label>
+							<input type="text" id="house" class="delivery__form-input delivery__form-input_houses">
+						</div>
+						<div class="delivery__input-block">
+							<label for="housing" class="delivery__input-label">Корпус</label>		
+							<input type="text" id="housing" class="delivery__form-input delivery__form-input_houses">
+						</div>
+						<div class="delivery__input-block">
+							<label for="apartment" class="delivery__input-label">Квартира</label>	
+							<input type="text" id="apartment" class="delivery__form-input delivery__form-input_houses">
+						</div>	
+						<div class="delivery__input-block">
+							<label for="floor" class="delivery__input-label">Этаж</label>
+							<input type="text" id="floor" class="delivery__form-input delivery__form-input_houses">
+						</div>	
+					</div>
+				</div>
+				<div class="delivery__form-part">
+					<div class="delivery__form-row">
+						<div class="delivery__comment-block">
+							<label for="comment" class="delivery__comment-label">Комментарий</label>
+							<textarea name="comment" id="comment" class="delivery__form-comment"></textarea>
+						</div>	
+					</div>
+					<div class="delivery__form-row">
+						<input type="radio">
+						<input type="radio">
+					</div>
+					<div class="delivery__form-row">
+						<input type="checkbox">
+					</div>
+					<div class="delivery__form-row">
+						<button type="submit" class="delivery__order-btn">Заказать</button>
+						<a href="#" class="delivery__clean-btn">Очистить</a>
+					</div>	
+				</div>
+			</form>
+		</div>
 	</section>
 	<section class="contacts">
 		<div class="yandex-map"></div>
