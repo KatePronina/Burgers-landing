@@ -23,23 +23,26 @@
 }
 .menu__element {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 80px;
-	@include section-height;
-
-	&_active + .menu__description {
-		display: block;
-	}
-}
+} 
 @each $type in (meet, vegan, diet) {
-	.menu__element-#{$type} {
+	.menu__element-title_#{$type} {
 		background-image: url("../img/menu__element-#{$type}.jpg");
 		background-size: cover;
 		background-position: center;
 	}
 }
+.menu__element-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	@include section-height;
+}
+.menu__element_active .menu__description {
+	display: block;
+}
+
 .menu__link {
 	font-family: gagalinregular;
 	font-size: 40px;
@@ -49,7 +52,6 @@
 
 	transform-origin: center;
 	transform: rotate(-90deg);
-	max-height: 60px;
 	width: 310px;
 }
 .menu__description {
