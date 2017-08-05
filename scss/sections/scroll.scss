@@ -4,6 +4,9 @@
 	top: 100px;
 
 	z-index: 3;
+	@include tablet {
+		display: none;
+	}
 }
 .scroll-bar__list {
 	margin: 0;

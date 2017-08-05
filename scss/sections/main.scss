@@ -9,9 +9,10 @@
 	@include section-height;
 
 	&__container {
-		width: 960px;
+		width: 95%;
+		max-width: 960px;
 		margin: 0 auto;
-		padding-top: 10px;
+		padding-top: rem(10px);
 	}
 }
 .header {
@@ -20,18 +21,23 @@
 	flex-direction: row;
 }
 .header__logo {
-	width: 92px;
-	height: 69px;
+	width: rem(92px);
+	height: rem(69px);
 }
 .header__menu {
-	width: 625px;
-	margin-left: 235px;
+	width: rem(625px);
+	max-width: 523px;
+	margin-left: auto;
+
+	@include tablet {
+		display: none;
+	}
 }
 .header__nav {
 	display: flex;
 	justify-content: space-between;
 	margin: 0;
-	margin-top: 20px;
+	margin-top: rem(20px);
 	padding: 0;
 	list-style: none;
 
@@ -40,18 +46,17 @@
 
 		&::before {
 			position: absolute;
-			top: 13px;
-			left: -20px;
+			top: rem(13px);
+			left: rem(-20px);
 
 			content: '';
-			width: 4px;
-			height: 4px;
+			width: rem(4px);
+			height: rem(4px);
 			border-radius: 50%;
 			background-color: #ffffff;
 		}
 
-		&:first-child::before,
-		&:last-child::before {
+		&:first-child::before {
 			display: none;
 		}
 	}
@@ -59,8 +64,8 @@
 .header__menu-item {
 	font-family: ubuntu, sans-serif;
 	font-weight: 700;
-	font-size: 13px;
-	line-height: 30px;
+	font-size: rem(13px);
+	line-height: rem(30px);
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #ffffff;
@@ -71,35 +76,59 @@
 }
 .header__menu-item-oder {
 	@include order-btn;
-	margin-left: -15px;
+	padding: rem(3px) rem(10px);
+	margin-top: rem(17px);
+	margin-left: rem(15px);
+
+	@include tablet {
+		margin-left: auto;
+	}
+}
+.header__menu-adaptive {
+	display: none;
+
+	@include tablet {
+		display: flex;
+		height: rem(23px);
+		width: rem(26px);
+		margin-top: rem(21px);
+		margin-left: rem(15px);
+		background-image: url("../img/menu-adaptive.svg");
+		background-repeat: no-repeat;
+	}
 }
 .main-content {
 	display: flex;
+
+	@include tablet {
+		flex-direction: column;
+		align-items: center;
+	}
 }
-.main-content__image {
-	width: 451px;
-	height: 420px;
+.main-content__image img {
+	width: rem(451px);
+	height: rem(420px);
 }
 .main-content__text {
-	width: 425px;
-	margin-top: 130px;
-	margin-left: 40px;
+	width: rem(425px);
+	margin-top: rem(130px);
+	margin-left: rem(40px);
 }
 .main-content__text-first {
 	@include title($orange);
 
-	line-height: 85px;
+	line-height: rem(85px);
 	display: block;
-	margin-bottom: 8px;
+	margin-bottom: rem(8px);
 }
 .main-content__text-second {
 	font-family: lifehackmedium, sans-serif;
-	font-size: 65px;
-	line-height: 70px;
+	font-size: rem(65px);
+	line-height: rem(70px);
 	color: #ffffff;
 }
 .scroll-down {
 	display: flex;
 	justify-content: center;
-	margin-top: 95px;
+	margin-top: rem(95px);
 }

@@ -1,6 +1,19 @@
+html {
+	@include tablet {
+		font-size: rem(15px);
+	}
+	@include mobile {
+		font-size: rem(13px);
+	}
+}
 body {
 	margin: 0;
 	padding: 0;
 	color: $dark;
 	line-height: 1.4;
+}
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
 }

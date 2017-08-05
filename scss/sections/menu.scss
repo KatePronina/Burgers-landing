@@ -7,8 +7,8 @@
 }
 .menu__title {
 	margin: 0;
-	padding-top: 100px;
-	padding-left: 95px;
+	padding-top: rem(100px);
+	padding-left: rem(95px);
 	@include title(#ffffff);
 }
 .menu__content {
@@ -36,7 +36,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 80px;
+	width: rem(80px);
 	@include section-height;
 }
 .menu__element_active .menu__description {
@@ -45,23 +45,23 @@
 
 .menu__link {
 	font-family: gagalinregular;
-	font-size: 40px;
+	font-size: rem(40px);
 	line-height: 1.5;
 	color: #ffffff;
 	text-decoration: none;
 
 	transform-origin: center;
 	transform: rotate(-90deg);
-	width: 310px;
+	width: rem(310px);
 }
 .menu__description {
 	display: none;
 
 	@include section-height;
-	width: 545px;
+	width: rem(545px);
 	margin: 0;
-	padding-top: 50px;
-	padding-left: 35px;
+	padding-top: rem(50px);
+	padding-left: rem(35px);
 	box-sizing: border-box;
 
 	background-color: $dark;
@@ -70,6 +70,6 @@
 
 	font-family: ubuntu;
 	font-weight: 300;
-	font-size: 14px;
+	font-size: rem(14px);
 	line-height: 1.9;
 }

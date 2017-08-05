@@ -1,8 +1,14 @@
+/*media*/
+@import "media.scss";
+
 @import "config/variables.scss";
 @import "config/mixins.scss";
 
 @import "layout/fonts.scss";
 @import "layout/base.scss";
+
+
+
 
 /*sections*/
 
@@ -14,3 +20,4 @@
 @import "sections/feedback.scss";
 @import "sections/contacts.scss";
 @import "sections/delivery.scss";
+

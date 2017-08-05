@@ -5,7 +5,8 @@
 	background-position: center;
 }
 .delivery__container {
-	width: 950px;
+	width: 95%;
+	max-width: rem(950px);
 	margin: 0 auto;
 
 	display: flex;
@@ -16,19 +17,19 @@
 	@include title($orange);
 	width: 100%;
 	margin: 0;
-	margin-bottom: 95px;
-	padding-top: 80px;
+	margin-bottom: rem(95px);
+	padding-top: rem(80px);
 	text-align: center;
 }
 .delivery__form {
 	display: flex;
 }
 .delivery__form-part {
-	width: 464px;
-	margin-right: 20px;
+	width: rem(464px);
+	margin-right: rem(20px);
 
 	font-family: ubuntu, sans-serif;
-	font-size: 14px;
+	font-size: rem(14px);
 	line-height: 1.5;
 	color: #ffffff;
 	font-weight: 300;
@@ -40,31 +41,31 @@
 .delivery__form-row {
 	display: flex;
 	align-items: center;
-	margin-bottom: 20px;
+	margin-bottom: rem(20px);
 }
 .delivery__form-input {
 	width: 100%;
-	padding: 7px;
-	height: 35px;
+	padding: rem(7px);
+	height: rem(35px);
 	box-sizing: border-box;
 	font-family: ubuntu;
-	font-size: 16px;
+	font-size: rem(16px);
 	background-color: #ffffff;
 	outline: none;
 	border: none;
-	border-radius: 4px;
+	border-radius: rem(4px);
 
 	&_houses {
-		max-width: 101px;
+		max-width: rem(101px);
 	}
 }
 .delivery__input-label {
 	display: block;
-	margin-bottom: 7px;
+	margin-bottom: rem(7px);
 }
 .delivery__input-block {
 	flex: 1;
-	margin-left: 20px;
+	margin-left: rem(20px);
 
 	&:first-child {
 		margin-left: 0;
@@ -75,19 +76,19 @@
 }
 .delivery__comment-label {
 	display: block;
-	margin-bottom: 7px;
+	margin-bottom: rem(7px);
 }
 .delivery__form-comment {
-	height: 117px;
-	max-height: 117px;
+	height: rem(117px);
+	max-height: rem(117px);
 	width: 100%;
-	padding: 7px;
+	padding: rem(7px);
 	box-sizing: border-box;
 
 	font-family: ubuntu;
-	font-size: 16px;
+	font-size: rem(16px);
 	background-color: #ffffff;
-	border-radius: 4px;
+	border-radius: rem(4px);
 	outline: none;
 	border: none;
 }
@@ -96,16 +97,16 @@
 }
 .delivery__payment-label {
 	position: relative;
-	margin-right: 20px;
-	padding-left: 25px;
+	margin-right: rem(20px);
+	padding-left: rem(25px);
 
 	&::before {
 		position: absolute;
 		content: '';
-		top: 2px;
+		top: rem(2px);
 		left: 0;
-		width: 15px;
-		height: 15px;
+		width: rem(15px);
+		height: rem(15px);
 		background-color: #ffffff;
 	}
 	&_radio::before {
@@ -116,10 +117,10 @@
 .delivery__payment-input:checked + .delivery__payment-label_box::after {
 	position: absolute;
 	content: '';
-	top: 5px;
-	left: 2px;
-	width: 11px;
-	height: 9px;
+	top: rem(5px);
+	left: rem(2px);
+	width: rem(11px);
+	height: rem(9px);
 	background-image: url("../img/checked.png");
 	background-repeat: no-repeat;
 	background-position: center;
@@ -127,10 +128,10 @@
 .delivery__payment-input:checked + .delivery__payment-label_radio::after {
 	position: absolute;
 	content: '';
-	top: 6px;
-	left: 4px;
-	width: 7px;
-	height: 7px;
+	top: rem(6px);
+	left: rem(4px);
+	width: rem(7px);
+	height: rem(7px);
 	background-color: $red;
 	border-radius: 50%;
 }
@@ -143,11 +144,11 @@
 	font-weight: 700;
 	color: #ffffff;
 	text-transform: uppercase;
-	font-size: 13px;
+	font-size: rem(13px);
 	cursor: pointer;
 }
 .delivery__clean-btn {
-	margin-left: 20px;
+	margin-left: rem(20px);
 	color: #ffffff;
 	text-decoration: none;
 

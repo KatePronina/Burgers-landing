@@ -9,9 +9,9 @@
 	color: $title-color;
 }
 @mixin order-btn {
-	padding: 10px 15px;
+	padding: rem(10px) rem(15px);
 	background-color: $red;
-	border-radius: 5px;
+	border-radius: rem(5px);
 	transition: 0.2s;
 
 	&:hover {
@@ -20,6 +20,6 @@
 	};
 }
 @mixin team-margins {
-	margin-top: 80px;
-	margin-left: 80px;
+	margin-top: rem(80px);
+	margin-left: rem(80px);
 }
