@@ -26,6 +26,10 @@
 	display: flex;
 	justify-content: space-between;
 	margin-top: rem(75px);
+
+	@include mobile {
+		flex-direction: column;
+	}
 }
 .advantages__item {
 	width: rem(292px);
@@ -41,6 +45,10 @@
 		font-size: rem(24px);
 		line-height: rem(28px);
 		text-align: center;
+
+		@include mobile {
+			text-align: left;
+		}
 	}
 	&-description {
 		width: rem(292px);
@@ -49,5 +57,13 @@
 		font-size: rem(14px);
 		line-height: rem(24px);
 		text-align: center;
+
+		@include mobile {
+			text-align: left;
+		}
+	}
+
+	@include mobile {
+		flex-direction: row;
 	}
 }

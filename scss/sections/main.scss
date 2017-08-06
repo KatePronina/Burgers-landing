@@ -91,10 +91,15 @@
 		display: flex;
 		height: rem(23px);
 		width: rem(26px);
-		margin-top: rem(21px);
+		margin-top: rem(22px);
 		margin-left: rem(15px);
 		background-image: url("../img/menu-adaptive.svg");
 		background-repeat: no-repeat;
+	}
+
+	@include mobile {
+		width: rem(40px);
+		height: rem(40px);
 	}
 }
 .main-content {
@@ -113,6 +118,11 @@
 	width: rem(425px);
 	margin-top: rem(130px);
 	margin-left: rem(40px);
+
+	@include mobile {
+		text-align: center;
+		margin-left: 0;
+	}
 }
 .main-content__text-first {
 	@include title($orange);

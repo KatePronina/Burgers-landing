@@ -20,6 +20,10 @@
 	padding-left: rem(80px);
 	padding-right: rem(80px);
 	box-sizing: border-box;
+
+	@include tablet {
+		flex-direction: column;
+	}
 }
 .contacts__content {
 	display: flex;
@@ -30,6 +34,10 @@
 	font-family: ubuntu;
 	font-size: rem(14px);
 	line-height: 1.6;
+
+	@include tablet {
+		align-items: center;
+	}
 }
 .contacts__adress {
 	font-weight: 300;
@@ -57,6 +65,10 @@
 .contacts__icons {
 	display: flex;
 	align-items: center;
+
+	@include tablet {
+		padding-bottom: rem(15px);
+	}
 } 
 .contacts__icon {
 	width: rem(25px);

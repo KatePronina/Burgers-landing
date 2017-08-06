@@ -14,6 +14,12 @@
 	color: #ffffff;
 
 	z-index: 1;
+	@include tablet {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 }
 .team-content__wrapper {
 	position: absolute;
@@ -31,52 +37,77 @@
 	margin: 0;
 	@include team-margins;
 	opacity: 1;
+	
+	@include tablet {
+		margin-left: 0;
+		margin-top: rem(50px);
+	}
 }
 .team-content__accordeon {
 	margin: 0;
 	padding: 0;
 	@include team-margins;
 	padding-left: rem(20px);
+
+	@include tablet {
+		text-align: center;
+		margin-left: 0;
+		margin-top: rem(50px);
+		padding: 0;
+	}
 }
 .team-content__acc-element {
 	margin-bottom: rem(24px);
 	list-style: none;
-	position: relative;
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: rem(11px);
-		left: rem(-20px);
-		width: 0;
-		height: 0;
-		border: rem(6px) solid transparent;
-		border-top-color: $orange;
-		border-bottom: 0;
-	}
-
 
 	&_active .team-content__acc-link {
 		color: $orange;
 	}
 
 	&_active .team-content__member { 
-		height: rem(102px);
+		min-height: rem(102px);
 		overflow: visible;
+
+		@include tablet {
+			height: 10rem;
+		}
 	}
 	&_active::before {
 		transform: rotate(180deg);
 	}
 }
 .team-content__acc-link {
+	position: relative;
 	font-family: gagalinregular;
 	font-size: rem(14px);
 	line-height: 2;
 	color: #ffffff;
 	text-decoration: none;
 
+	&::before {
+		content: '';
+		position: absolute;
+		top: rem(5px);
+		left: rem(-20px);
+		width: 0;
+		height: 0;
+		border: rem(6px) solid transparent;
+		border-top-color: $orange;
+		border-bottom: 0;
+
+		@include tablet {
+			top: rem(11px);
+			left: rem(-20px);
+		}
+	}
+
 	&_active {
 		color: $orange;
+	}
+	
+
+	@include tablet {
+		font-size: rem(24px);
 	}
 }
 .team-content__member {
@@ -92,12 +123,21 @@
 	line-height: 1.5;
 
 	&_active {
-		height: rem(102px);
+		min-height: rem(102px);
 		overflow: visible;
+	}
+
+	@include tablet {
+		flex-direction: column;
+		align-items: center;
 	}
 }
 .team-content__member-content {
 	margin-left: rem(20px);
+
+	@include tablet {
+		margin-left: 0;
+	}
 }
 .team-content__member-img {
 	border-radius: 50%;

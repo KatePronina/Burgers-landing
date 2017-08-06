@@ -38,6 +38,13 @@
 	align-items: center;
 	width: rem(80px);
 	@include section-height;
+
+	@include tablet {
+		width: rem(60px);
+	}
+	@include mobile {
+		width: rem(50px);
+	}
 }
 .menu__element_active .menu__description {
 	display: block;
@@ -53,6 +60,10 @@
 	transform-origin: center;
 	transform: rotate(-90deg);
 	width: rem(310px);
+
+	@include tablet {
+		font-size: rem(30px);
+	}
 }
 .menu__description {
 	display: none;
@@ -72,4 +83,11 @@
 	font-weight: 300;
 	font-size: rem(14px);
 	line-height: 1.9;
+
+	@include tablet  {
+		width: rem(400px);
+	}
+	@include mobile {
+		width: 100%;
+	}
 }

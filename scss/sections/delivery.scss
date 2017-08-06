@@ -20,9 +20,18 @@
 	margin-bottom: rem(95px);
 	padding-top: rem(80px);
 	text-align: center;
+
+	@include tablet {
+		margin-bottom: rem(30px);
+		padding-top: rem(50px);
+	}
 }
 .delivery__form {
 	display: flex;
+
+	@include tablet {
+		flex-direction: column;
+	}
 }
 .delivery__form-part {
 	width: rem(464px);
@@ -37,6 +46,11 @@
 	&:last-child {
 		margin-right: 0;
 	}
+
+	@include mobile {
+		
+	}
+
 }
 .delivery__form-row {
 	display: flex;
