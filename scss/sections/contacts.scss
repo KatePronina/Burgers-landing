@@ -22,6 +22,11 @@
 	box-sizing: border-box;
 
 	@include tablet {
+		padding-left: rem(50px);
+		padding-right: rem(50px);
+	}
+
+	@include mobile {
 		flex-direction: column;
 	}
 }
@@ -35,7 +40,7 @@
 	font-size: rem(14px);
 	line-height: 1.6;
 
-	@include tablet {
+	@include mobile {
 		align-items: center;
 	}
 }
@@ -66,7 +71,7 @@
 	display: flex;
 	align-items: center;
 
-	@include tablet {
+	@include mobile {
 		padding-bottom: rem(15px);
 	}
 } 

@@ -25,12 +25,21 @@
 		margin-bottom: rem(30px);
 		padding-top: rem(50px);
 	}
+
+	@include mobile {
+		margin-bottom: rem(25px);
+		padding-top: rem(45px);
+	}
 }
 .delivery__form {
 	display: flex;
 
 	@include tablet {
 		flex-direction: column;
+	}
+
+	@include mobile {
+		padding-bottom: rem(40px);
 	}
 }
 .delivery__form-part {
@@ -47,8 +56,12 @@
 		margin-right: 0;
 	}
 
+	@include tablet {
+		margin-right: 0;
+	}
+
 	@include mobile {
-		
+		width: 100%;
 	}
 
 }
@@ -56,6 +69,10 @@
 	display: flex;
 	align-items: center;
 	margin-bottom: rem(20px);
+
+	@include mobile {
+		justify-content: center;
+	}
 }
 .delivery__form-input {
 	width: 100%;
@@ -71,6 +88,9 @@
 
 	&_houses {
 		max-width: rem(101px);
+	}
+	&:focus {
+		border: 1px solid $orange;
 	}
 }
 .delivery__input-label {
@@ -105,6 +125,10 @@
 	border-radius: rem(4px);
 	outline: none;
 	border: none;
+
+	&:focus {
+		border: 1px solid $orange;
+	}
 }
 .delivery__payment-input {
 	display: none;
@@ -138,6 +162,12 @@
 	background-image: url("../img/checked.png");
 	background-repeat: no-repeat;
 	background-position: center;
+
+	@include mobile {
+		width: rem(12px);
+		height: rem(10px);
+	}
+	
 }
 .delivery__payment-input:checked + .delivery__payment-label_radio::after {
 	position: absolute;

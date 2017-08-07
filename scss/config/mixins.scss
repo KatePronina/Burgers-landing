@@ -1,12 +1,15 @@
 @mixin section-height {
-	min-height: 650px;
-	height: 100vh;
+	min-height: 100vh;
 }
 @mixin title($title-color) {
 	font-family: gagalinregular, sans-serif;
 	font-weight: normal;
-	font-size: 72px;
+	font-size: rem(72px);
 	color: $title-color;
+
+	@include tablet {
+		font-size: rem(65px);
+	}
 }
 @mixin order-btn {
 	padding: rem(10px) rem(15px);
