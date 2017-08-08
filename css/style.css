@@ -375,12 +375,15 @@ body {
         font-size: 1.625rem;
         line-height: 1.875rem; } }
   .advantages__item-description {
-    /*width: rem(292px);*/
+    width: 18.25rem;
     font-family: ubuntu;
     font-weight: 300;
     font-size: 0.875rem;
     line-height: 1.5rem;
     text-align: center; }
+    @media (max-width: 768px) {
+      .advantages__item-description {
+        width: 100%; } }
     @media (max-width: 480px) {
       .advantages__item-description {
         text-align: left;
@@ -705,6 +708,7 @@ body {
 .feedback__item {
   width: 25%;
   min-height: 20.3125rem;
+  height: 50%;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -719,8 +723,7 @@ body {
   opacity: 0;
   position: absolute;
   content: '';
-  /*height: 100%;*/
-  height: 25vh;
+  height: 100%;
   top: 0;
   left: 0;
   padding-top: 2.5rem;

@@ -69,12 +69,16 @@
 		}
 	}
 	&-description {
-		/*width: rem(292px);*/
+		width: rem(292px);
 		font-family: ubuntu;
 		font-weight: 300;
 		font-size: rem(14px);
 		line-height: rem(24px);
 		text-align: center;
+
+		@include tablet {
+			width: 100%;
+		}
 
 		@include mobile {
 			text-align: left;
