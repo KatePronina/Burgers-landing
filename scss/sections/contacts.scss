@@ -78,19 +78,17 @@
 .contacts__icon {
 	width: rem(25px);
 	height: rem(20px);
-	/*margin-left: rem(15px);*/
 }
 .contacts__link {
 	width: rem(25px);
 	height: rem(20px);
 	margin-left: rem(15px);
+
+	&:hover .contacts__icon-element {
+		fill: #ffffff;
+	}
 }
 .contacts__icon-element {
 	fill: #585858;
-
-	&:hover {
-		fill: #ffffff;
-	}
-
 }
 	

@@ -973,18 +973,17 @@ body {
 
 .contacts__icon {
   width: 1.5625rem;
-  height: 1.25rem;
-  /*margin-left: rem(15px);*/ }
+  height: 1.25rem; }
 
 .contacts__link {
   width: 1.5625rem;
   height: 1.25rem;
   margin-left: 0.9375rem; }
+  .contacts__link:hover .contacts__icon-element {
+    fill: #ffffff; }
 
 .contacts__icon-element {
   fill: #585858; }
-  .contacts__icon-element:hover {
-    fill: #ffffff; }
 
 .delivery {
   min-height: 100vh;
