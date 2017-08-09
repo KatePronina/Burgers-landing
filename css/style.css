@@ -707,8 +707,9 @@ body {
 
 .feedback__item {
   width: 25%;
-  min-height: 20.3125rem;
-  height: 50%;
+  /*min-height: rem(325px);*/
+  /*height: 50%;*/
+  min-height: 50vh;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -971,6 +972,11 @@ body {
       padding-bottom: 0.9375rem; } }
 
 .contacts__icon {
+  width: 1.5625rem;
+  height: 1.25rem;
+  /*margin-left: rem(15px);*/ }
+
+.contacts__link {
   width: 1.5625rem;
   height: 1.25rem;
   margin-left: 0.9375rem; }
