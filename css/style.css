@@ -117,7 +117,8 @@ body {
 
 .header__logo {
   width: 5.75rem;
-  height: 4.3125rem; }
+  height: 4.3125rem;
+  z-index: 30; }
 
 .header__menu {
   width: 39.0625rem;
@@ -1203,3 +1204,82 @@ body {
   text-decoration: none; }
   .delivery__clean-btn:hover {
     text-decoration: underline; }
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2f3234;
+  z-index: 20;
+  display: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .mobile-menu_open {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+
+.mobile-menu__list {
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
+.mobile-menu__list-item {
+  margin-bottom: 0.8125rem;
+  padding-bottom: 1.6875rem;
+  position: relative; }
+  .mobile-menu__list-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0.4375rem;
+    height: 0.4375rem;
+    border-radius: 50%;
+    background-color: #ffffff; }
+  .mobile-menu__list-item:last-child::before {
+    display: none; }
+
+.mobile-menu__list-link {
+  font-family: ubuntu;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.mobile-menu__btn {
+  position: absolute;
+  top: 2rem;
+  right: 2.1875rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: none;
+  outline: none;
+  background-color: transparent; }
+  .mobile-menu__btn::before, .mobile-menu__btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5625rem;
+    width: 1.3125rem;
+    height: 0.1875rem;
+    border-radius: 1px;
+    background-color: #c1c2c2;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .mobile-menu__btn::after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }

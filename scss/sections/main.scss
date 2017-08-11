@@ -23,6 +23,8 @@
 .header__logo {
 	width: rem(92px);
 	height: rem(69px);
+
+	z-index: 30;
 }
 .header__menu {
 	width: rem(625px);
