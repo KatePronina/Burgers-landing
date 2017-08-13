@@ -1,0 +1,207 @@
+.catalog {
+	@include section-height;
+	display: flex;
+	justify-content: center;
+
+	background: linear-gradient(#f9b43b, #eb8d38, #f9b43b);
+}
+.catalog__arrow-previous,
+.catalog__arrow-next {
+	display: flex;
+	align-items: center;
+} 
+.catalog__arrow-img {
+	width: rem(25px);
+	height: rem(35px);
+	cursor: pointer;
+
+	&_previous {
+		transform: rotate(90deg);
+	}
+
+	&_next {
+		transform: rotate(-90deg);
+	}
+}
+.product {
+	display: flex;
+	align-items: center;
+	margin-left: rem(15px);
+}
+.product__burger {
+	width: rem(505px);
+	height: rem(480px);
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.product__info {
+	max-width: rem(430px);
+	height: rem(480px);
+	margin-left: rem(15px);
+	margin-right: rem(50px);
+}
+.product__info-name {
+	margin: 0;
+	margin-bottom: rem(35px);
+
+	@include title(#ffffff);
+	line-height: rem(78px);
+	font-weight: normal;
+}
+.product__info-description {
+	margin: 0;
+	margin-bottom: rem(30px);
+
+	font-family: ubuntu, sans-serif;
+	font-weight: 300;
+	font-size: rem(14px);
+	line-height: rem(24px);
+	color: #ffffff;
+}
+.product__info-order {
+	display: flex;
+	align-items: baseline;
+}
+.product__info-price {
+	font-family: gagalinregular, sans-serif;
+	font-size: rem(30px);
+	font-weight: normal;
+	color: $red;
+}
+.product__info-number {
+	font-size: rem(72px);
+}
+.product__info-order-btn {
+	@include order-btn;
+	margin-left: rem(30px);
+	padding: rem(3px) rem(15px);
+
+	font-family: ubuntu, sans-serif;
+	font-size: rem(13px);
+	line-height: rem(30px);
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.composition {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: rem(90px);
+	height: rem(90px);
+	background-color: #f08c33;
+	border-radius: rem(4px);
+
+	background-image: url("../img/burger.svg");
+	background-position: center rem(14px);
+	background-repeat: no-repeat;
+
+	transition: .2s;
+
+	&:hover {
+		background-color: $red;
+	}
+
+	&:hover .composition__ingredients {
+		display: block;
+	}
+}
+.composition__name {
+	margin-bottom: rem(5px);
+
+	font-family: gagalinregular;
+	font-weight: normal;
+	font-size: rem(14px);
+	line-height: rem(28px);
+	color: #ffffff;
+}
+.composition__ingredients {
+	display: none;
+
+	position: absolute;
+	top: 0;
+	left: rem(90px);
+	width: rem(270px);
+	padding-top: rem(30px);
+	padding-left: rem(20px);
+	padding-right: rem(20px);
+	box-sizing: border-box;
+
+	background-color: rgba(255, 255, 255, .9);
+	border-radius: rem(4px);
+	font-family: ubuntu, sans-serif;
+	font-size: rem(14px);
+	line-height: rem(24px);
+	color: $dark;
+}
+.composition__ingredients-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.composition__ingredients-item {
+	display: flex;
+	position: relative;
+	margin-bottom: rem(30px);
+	padding-left: rem(70px);
+
+	&::before {
+		position: absolute;
+		top: -50%;
+		left: 0;
+		content: '';
+		width: rem(48px);
+		height: rem(43px);
+	}
+}
+@each $ingredient in (beef, buns, salad, sauce, cucumber, cheese) {
+	.composition__ingredients-item_#{$ingredient}::before {
+		background-image: url("../img/#{$ingredient}.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+.composition__ingredients-name {
+	font-weight: 700;
+}
+.composition__ingredients-weight {
+	margin-left: auto;
+	font-weight: 300;
+	text-align: right;
+}
+.product__kkal {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	position: absolute; 
+	bottom: 0;
+	left: 0;
+	width: rem(65px);
+	height: rem(80px);
+	background-image: url("../img/kkal.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+
+	font-family: gagalinregular, sans-serif;
+	color: #ffffff;
+	font-size: rem(14px);
+	line-height: rem(24px);
+	font-weight: normal;
+	opacity: .5;
+}
+.product__kkal-number {
+	margin-top: rem(47px);
+	font-size: rem(20px);
+}
+.product__kkal-name {
+	margin-top: rem(5px);
+}

@@ -173,7 +173,7 @@ body {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
-  padding: 0.1875rem 0.625rem;
+  padding: 0.1875rem 0.9375rem;
   margin-top: 1.0625rem;
   margin-left: 0.9375rem; }
   .header__menu-item-oder:hover {
@@ -1204,6 +1204,292 @@ body {
   text-decoration: none; }
   .delivery__clean-btn:hover {
     text-decoration: underline; }
+
+.catalog {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9b43b), color-stop(#eb8d38), to(#f9b43b));
+  background: -webkit-linear-gradient(#f9b43b, #eb8d38, #f9b43b);
+  background: -o-linear-gradient(#f9b43b, #eb8d38, #f9b43b);
+  background: linear-gradient(#f9b43b, #eb8d38, #f9b43b); }
+
+.catalog__arrow-previous,
+.catalog__arrow-next {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.catalog__arrow-img {
+  width: 1.5625rem;
+  height: 2.1875rem;
+  cursor: pointer; }
+  .catalog__arrow-img_previous {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .catalog__arrow-img_next {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg); }
+
+.product {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0.9375rem; }
+
+.product__burger {
+  width: 31.5625rem;
+  height: 30rem;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.product__info {
+  max-width: 26.875rem;
+  height: 30rem;
+  margin-left: 0.9375rem;
+  margin-right: 3.125rem; }
+
+.product__info-name {
+  margin: 0;
+  margin-bottom: 2.1875rem;
+  font-family: gagalinregular, sans-serif;
+  font-weight: normal;
+  font-size: 4.5rem;
+  color: #ffffff;
+  line-height: 4.875rem;
+  font-weight: normal; }
+  @media (max-width: 768px) {
+    .product__info-name {
+      font-size: 4.0625rem; } }
+
+.product__info-description {
+  margin: 0;
+  margin-bottom: 1.875rem;
+  font-family: ubuntu, sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: #ffffff; }
+
+.product__info-order {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline; }
+
+.product__info-price {
+  font-family: gagalinregular, sans-serif;
+  font-size: 1.875rem;
+  font-weight: normal;
+  color: #e45028; }
+
+.product__info-number {
+  font-size: 4.5rem; }
+
+.product__info-order-btn {
+  padding: 0.625rem 0.9375rem;
+  background-color: #e45028;
+  border-radius: 0.3125rem;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  margin-left: 1.875rem;
+  padding: 0.1875rem 0.9375rem;
+  font-family: ubuntu, sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff; }
+  .product__info-order-btn:hover {
+    background-color: #c13c18;
+    text-decoration: none; }
+
+.composition {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5.625rem;
+  height: 5.625rem;
+  background-color: #f08c33;
+  border-radius: 0.25rem;
+  background-image: url("../img/burger.svg");
+  background-position: center 0.875rem;
+  background-repeat: no-repeat;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s; }
+  .composition:hover {
+    background-color: #e45028; }
+  .composition:hover .composition__ingredients {
+    display: block; }
+
+.composition__name {
+  margin-bottom: 0.3125rem;
+  font-family: gagalinregular;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  color: #ffffff; }
+
+.composition__ingredients {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 5.625rem;
+  width: 16.875rem;
+  padding-top: 1.875rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.25rem;
+  font-family: ubuntu, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: #2f3234; }
+
+.composition__ingredients-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.composition__ingredients-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-bottom: 1.875rem;
+  padding-left: 4.375rem; }
+  .composition__ingredients-item::before {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    content: '';
+    width: 3rem;
+    height: 2.6875rem; }
+
+.composition__ingredients-item_beef::before {
+  background-image: url("../img/beef.svg");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.composition__ingredients-item_buns::before {
+  background-image: url("../img/buns.svg");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.composition__ingredients-item_salad::before {
+  background-image: url("../img/salad.svg");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.composition__ingredients-item_sauce::before {
+  background-image: url("../img/sauce.svg");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.composition__ingredients-item_cucumber::before {
+  background-image: url("../img/cucumber.svg");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.composition__ingredients-item_cheese::before {
+  background-image: url("../img/cheese.svg");
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.composition__ingredients-name {
+  font-weight: 700; }
+
+.composition__ingredients-weight {
+  margin-left: auto;
+  font-weight: 300;
+  text-align: right; }
+
+.product__kkal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 4.0625rem;
+  height: 5rem;
+  background-image: url("../img/kkal.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: gagalinregular, sans-serif;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  opacity: .5; }
+
+.product__kkal-number {
+  margin-top: 2.9375rem;
+  font-size: 1.25rem; }
+
+.product__kkal-name {
+  margin-top: 0.3125rem; }
 
 .mobile-menu {
   position: fixed;
