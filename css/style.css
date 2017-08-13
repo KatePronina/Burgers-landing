@@ -1219,6 +1219,9 @@ body {
   background: -webkit-linear-gradient(#f9b43b, #eb8d38, #f9b43b);
   background: -o-linear-gradient(#f9b43b, #eb8d38, #f9b43b);
   background: linear-gradient(#f9b43b, #eb8d38, #f9b43b); }
+  @media (max-width: 480px) {
+    .catalog {
+      position: relative; } }
 
 .catalog__arrow-previous,
 .catalog__arrow-next {
@@ -1229,7 +1232,24 @@ body {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  @media (max-width: 480px) {
+    .catalog__arrow-previous,
+    .catalog__arrow-next {
+      position: absolute;
+      top: 31.25rem; } }
+
+@media (max-width: 480px) {
+  .catalog__arrow-previous {
+    left: 5%; } }
+
+@media (max-width: 480px) {
+  .catalog__arrow-next {
+    right: 5%; } }
 
 .catalog__arrow-img {
   width: 1.5625rem;
@@ -1254,6 +1274,20 @@ body {
   -ms-flex-align: center;
   align-items: center;
   margin-left: 0.9375rem; }
+  @media (max-width: 768px) {
+    .product {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-left: 5rem;
+      margin-right: 5rem;
+      margin-top: 6.25rem; } }
 
 .product__burger {
   width: 31.5625rem;
@@ -1267,12 +1301,39 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media (max-width: 768px) {
+    .product__burger {
+      height: 28.75rem; } }
+  @media (max-width: 480px) {
+    .product__burger {
+      width: 30rem; } }
 
 .product__info {
   max-width: 26.875rem;
   height: 30rem;
   margin-left: 0.9375rem;
   margin-right: 3.125rem; }
+  @media (max-width: 768px) {
+    .product__info {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 0;
+      text-align: center; } }
 
 .product__info-name {
   margin: 0;
@@ -1289,7 +1350,7 @@ body {
 
 .product__info-description {
   margin: 0;
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.5625rem;
   font-family: ubuntu, sans-serif;
   font-weight: 300;
   font-size: 0.875rem;
@@ -1335,6 +1396,14 @@ body {
     background-color: #c13c18;
     text-decoration: none; }
 
+.product__burger-img {
+  width: 31.5625rem;
+  height: 20.5625rem; }
+  @media (max-width: 480px) {
+    .product__burger-img {
+      width: 30rem;
+      height: 19rem; } }
+
 .composition {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1373,6 +1442,9 @@ body {
   font-size: 0.875rem;
   line-height: 1.75rem;
   color: #ffffff; }
+  @media (max-width: 480px) {
+    .composition__name {
+      margin-bottom: 0; } }
 
 .composition__ingredients {
   display: none;
@@ -1412,6 +1484,10 @@ body {
     content: '';
     width: 3rem;
     height: 2.6875rem; }
+    @media (max-width: 480px) {
+      .composition__ingredients-item::before {
+        width: 3.3125rem;
+        height: 3rem; } }
 
 .composition__ingredients-item_beef::before {
   background-image: url("../img/beef.svg");
@@ -1483,6 +1559,14 @@ body {
   line-height: 1.5rem;
   font-weight: normal;
   opacity: .5; }
+  @media (max-width: 768px) {
+    .product__kkal {
+      top: 0;
+      right: 0;
+      left: auto; } }
+  @media (max-width: 480px) {
+    .product__kkal {
+      width: 4.5rem; } }
 
 .product__kkal-number {
   margin-top: 2.9375rem;
@@ -1490,6 +1574,9 @@ body {
 
 .product__kkal-name {
   margin-top: 0.3125rem; }
+  @media (max-width: 768px) {
+    .product__kkal-name {
+      margin-top: 0.625rem; } }
 
 .mobile-menu {
   position: fixed;
