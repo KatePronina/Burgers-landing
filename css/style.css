@@ -376,7 +376,7 @@ body {
         font-size: 1.625rem;
         line-height: 1.875rem; } }
   .advantages__item-description {
-    width: 18.25rem;
+    max-width: 18.25rem;
     font-family: ubuntu;
     font-weight: 300;
     font-size: 0.875rem;
@@ -731,7 +731,7 @@ body {
   padding-top: 2.5rem;
   padding-left: 1.25rem;
   padding-right: 1.875rem;
-  padding-bottom: 3.125rem;
+  /*padding-bottom: rem(50px);*/
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.5);
@@ -746,6 +746,11 @@ body {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); }
+  @media (max-width: 970px) {
+    .feedback__item-content {
+      padding-top: 0.9375rem;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem; } }
   @media (max-width: 768px) {
     .feedback__item-content {
       padding-top: 0;
@@ -947,7 +952,8 @@ body {
   padding-left: 1.25rem;
   position: relative;
   font-weight: 900;
-  color: #e45028; }
+  color: #e45028;
+  text-decoration: none; }
   .contacts__tel::before {
     content: '';
     position: absolute;
@@ -1200,8 +1206,15 @@ body {
 
 .delivery__clean-btn {
   margin-left: 1.25rem;
+  font-size: 0.875rem;
+  font-family: ubuntu;
+  font-weight: 300;
   color: #ffffff;
-  text-decoration: none; }
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer; }
   .delivery__clean-btn:hover {
     text-decoration: underline; }
 
@@ -1219,7 +1232,7 @@ body {
   background: -webkit-linear-gradient(#f9b43b, #eb8d38, #f9b43b);
   background: -o-linear-gradient(#f9b43b, #eb8d38, #f9b43b);
   background: linear-gradient(#f9b43b, #eb8d38, #f9b43b); }
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     .catalog {
       position: relative; } }
 
@@ -1237,17 +1250,21 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     .catalog__arrow-previous,
     .catalog__arrow-next {
       position: absolute;
+      top: 50%; } }
+  @media (max-width: 480px) {
+    .catalog__arrow-previous,
+    .catalog__arrow-next {
       top: 31.25rem; } }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .catalog__arrow-previous {
     left: 5%; } }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .catalog__arrow-next {
     right: 5%; } }
 
@@ -1306,11 +1323,11 @@ body {
       height: 28.75rem; } }
   @media (max-width: 480px) {
     .product__burger {
-      width: 30rem; } }
+      width: 25rem; } }
 
 .product__info {
   max-width: 26.875rem;
-  height: 30rem;
+  min-height: 30rem;
   margin-left: 0.9375rem;
   margin-right: 3.125rem; }
   @media (max-width: 768px) {
@@ -1401,8 +1418,8 @@ body {
   height: 20.5625rem; }
   @media (max-width: 480px) {
     .product__burger-img {
-      width: 30rem;
-      height: 19rem; } }
+      width: 25rem;
+      height: 15.625rem; } }
 
 .composition {
   display: -webkit-box;

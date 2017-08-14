@@ -193,8 +193,15 @@
 }
 .delivery__clean-btn {
 	margin-left: rem(20px);
+	font-size: rem(14px);
+	font-family: ubuntu;
+	font-weight: 300;
 	color: #ffffff;
 	text-decoration: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
 
 	&:hover {
 		text-decoration: underline;

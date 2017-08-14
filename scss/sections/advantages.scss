@@ -69,12 +69,13 @@
 		}
 	}
 	&-description {
-		width: rem(292px);
+		max-width: rem(292px);
 		font-family: ubuntu;
 		font-weight: 300;
 		font-size: rem(14px);
 		line-height: rem(24px);
 		text-align: center;
+
 
 		@include tablet {
 			width: 100%;

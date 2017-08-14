@@ -32,7 +32,7 @@
 	padding-top: rem(40px);
 	padding-left: rem(20px);
 	padding-right: rem(30px);
-	padding-bottom: rem(50px);
+	/*padding-bottom: rem(50px);*/
 	box-sizing: border-box;
 
 	background-color: rgba(0, 0, 0, .5);
@@ -43,6 +43,12 @@
 	&:hover {
 		opacity: 1;
 		transform: scale(1);
+	}
+
+	@media (max-width: 970px) {
+		padding-top: rem(15px);
+		padding-left: rem(10px);
+		padding-right: rem(10px);
 	}
 
 	@include tablet  {

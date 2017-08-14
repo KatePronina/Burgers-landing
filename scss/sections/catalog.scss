@@ -5,7 +5,7 @@
 
 	background: linear-gradient(#f9b43b, #eb8d38, #f9b43b);
 
-	@include mobile {
+	@include tablet {
 		position: relative;
 	}
 }
@@ -15,18 +15,22 @@
 	align-items: center;
 	justify-content: center;
 
-	@include mobile {
+	@include tablet {
 		position: absolute;
+		top: 50%;
+	}
+
+	@include mobile {
 		top: rem(500px);
 	}
 }
 .catalog__arrow-previous {
-	@include mobile {
+	@include tablet {
 		left: 5%;
 	}
 } 
 .catalog__arrow-next {
-	@include mobile {
+	@include tablet {
 		right: 5%;
 	}
 } 
@@ -67,12 +71,12 @@
 		height: rem(460px);
 	}
 	@include mobile {
-		width: rem(480px);
+		width: rem(400px);
 	}
 }
 .product__info {
 	max-width: rem(430px);
-	height: rem(480px);
+	min-height: rem(480px);
 	margin-left: rem(15px);
 	margin-right: rem(50px);
 
@@ -134,8 +138,8 @@
 	height: rem(329px);
 
 	@include mobile {
-		width: rem(480px);
-		height: rem(304px);
+		width: rem(400px);
+		height: rem(250px);
 	}
 }
 
