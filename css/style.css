@@ -1603,7 +1603,15 @@ body {
   height: 100%;
   background-color: #2f3234;
   z-index: 20;
-  display: none;
+  display: none; }
+
+.mobile-menu__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1612,11 +1620,6 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
-  .mobile-menu_open {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
 
 .mobile-menu__list {
   margin: 0;
