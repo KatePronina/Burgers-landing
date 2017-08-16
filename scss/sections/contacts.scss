@@ -7,7 +7,7 @@
 	background-image: url("../img/contacts-bg.jpg");
 	background-size: cover;
 }
-.contacts__footer {
+.footer {
 	position: absolute;
 	bottom: 0;
 	display: flex;
@@ -30,7 +30,7 @@
 		flex-direction: column;
 	}
 }
-.contacts__content {
+.footer__content {
 	display: flex;
 	flex-direction: column;
 	padding-top: rem(8px);
@@ -44,11 +44,11 @@
 		align-items: center;
 	}
 }
-.contacts__adress {
+.footer__adress {
 	font-weight: 300;
 	color: #ffffff;
 }
-.contacts__tel {
+.footer__tel {
 	padding-left: rem(20px);
 	position: relative;
 
@@ -68,7 +68,7 @@
 		background-position: center;
 	}
 }
-.contacts__icons {
+.footer__icons {
 	display: flex;
 	align-items: center;
 
@@ -76,20 +76,20 @@
 		padding-bottom: rem(15px);
 	}
 } 
-.contacts__icon {
+.footer__icon {
 	width: rem(25px);
 	height: rem(20px);
 }
-.contacts__link {
+.footer__link {
 	width: rem(25px);
 	height: rem(20px);
 	margin-left: rem(15px);
 
-	&:hover .contacts__icon-element {
+	&:hover .footer__icon-element {
 		fill: #ffffff;
 	}
 }
-.contacts__icon-element {
+.footer__icon-element {
 	fill: #585858;
 }
 	

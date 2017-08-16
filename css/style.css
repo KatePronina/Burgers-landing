@@ -228,7 +228,7 @@ body {
       height: 24.375rem; } }
 
 .main-content__text {
-  width: 26.5625rem;
+  max-width: 26.5625rem;
   margin-top: 8.125rem;
   margin-left: 2.5rem; }
   @media (max-width: 768px) {
@@ -482,15 +482,15 @@ body {
   .team-content__acc-element_active .team-content__acc-link {
     color: #f9b43b; }
   .team-content__acc-element_active .team-content__member {
-    min-height: 6.375rem;
-    overflow: visible; }
+    /*min-height: rem(102px);
+		overflow: visible;*/ }
     @media (max-width: 768px) {
       .team-content__acc-element_active .team-content__member {
         height: 12rem; } }
     @media (max-width: 480px) {
       .team-content__acc-element_active .team-content__member {
         font-size: 1.0625rem; } }
-  .team-content__acc-element_active::before {
+  .team-content__acc-element_active .team-content__acc-link::before {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg); }
@@ -514,7 +514,10 @@ body {
     height: 0;
     border: 0.375rem solid transparent;
     border-top-color: #f9b43b;
-    border-bottom: 0; }
+    border-bottom: 0;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
     @media (max-width: 768px) {
       .team-content__acc-link::before {
         top: 0.6875rem;
@@ -525,21 +528,28 @@ body {
     .team-content__acc-link {
       font-size: 1.5rem; } }
 
+.team-content__member-wrapper {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+
 .team-content__member {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 20.9375rem;
-  height: 0;
-  overflow: hidden;
+  height: 7.5rem;
+  /*overflow: hidden;*/
   margin-top: 0.625rem;
   font-family: ubuntu;
   font-size: 0.875rem;
   line-height: 1.5; }
   .team-content__member_active {
-    min-height: 6.375rem;
-    overflow: visible; }
+    /*min-height: rem(102px);
+		overflow: visible;*/ }
   @media (max-width: 768px) {
     .team-content__member {
       -webkit-box-orient: vertical;
@@ -551,7 +561,11 @@ body {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-      font-size: 1rem; } }
+      font-size: 1rem;
+      height: 12.5rem; } }
+  @media (max-width: 480px) {
+    .team-content__member {
+      height: 13.75rem; } }
 
 .team-content__member-content {
   margin-left: 1.25rem; }
@@ -888,7 +902,7 @@ body {
   background-image: url("../img/contacts-bg.jpg");
   background-size: cover; }
 
-.contacts__footer {
+.footer {
   position: absolute;
   bottom: 0;
   display: -webkit-box;
@@ -911,18 +925,18 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
   @media (max-width: 768px) {
-    .contacts__footer {
+    .footer {
       padding-left: 3.125rem;
       padding-right: 3.125rem; } }
   @media (max-width: 480px) {
-    .contacts__footer {
+    .footer {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column; } }
 
-.contacts__content {
+.footer__content {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -938,23 +952,23 @@ body {
   font-size: 0.875rem;
   line-height: 1.6; }
   @media (max-width: 480px) {
-    .contacts__content {
+    .footer__content {
       -webkit-box-align: center;
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center; } }
 
-.contacts__adress {
+.footer__adress {
   font-weight: 300;
   color: #ffffff; }
 
-.contacts__tel {
+.footer__tel {
   padding-left: 1.25rem;
   position: relative;
   font-weight: 900;
   color: #e45028;
   text-decoration: none; }
-  .contacts__tel::before {
+  .footer__tel::before {
     content: '';
     position: absolute;
     top: 0.3125rem;
@@ -965,7 +979,7 @@ body {
     background-repeat: no-repeat;
     background-position: center; }
 
-.contacts__icons {
+.footer__icons {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -975,21 +989,21 @@ body {
   -ms-flex-align: center;
   align-items: center; }
   @media (max-width: 480px) {
-    .contacts__icons {
+    .footer__icons {
       padding-bottom: 0.9375rem; } }
 
-.contacts__icon {
+.footer__icon {
   width: 1.5625rem;
   height: 1.25rem; }
 
-.contacts__link {
+.footer__link {
   width: 1.5625rem;
   height: 1.25rem;
   margin-left: 0.9375rem; }
-  .contacts__link:hover .contacts__icon-element {
+  .footer__link:hover .footer__icon-element {
     fill: #ffffff; }
 
-.contacts__icon-element {
+.footer__icon-element {
   fill: #585858; }
 
 .delivery {

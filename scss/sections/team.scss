@@ -66,8 +66,8 @@
 	}
 
 	&_active .team-content__member { 
-		min-height: rem(102px);
-		overflow: visible;
+		/*min-height: rem(102px);
+		overflow: visible;*/
 
 		@include tablet {
 			height: 12rem;
@@ -76,7 +76,7 @@
 			font-size: rem(17px);
 		}
 	}
-	&_active::before {
+	&_active .team-content__acc-link::before {
 		transform: rotate(180deg);
 	}
 
@@ -102,6 +102,7 @@
 		border: rem(6px) solid transparent;
 		border-top-color: $orange;
 		border-bottom: 0;
+		transition: .3s;
 
 		@include tablet {
 			top: rem(11px);
@@ -118,11 +119,16 @@
 		font-size: rem(24px);
 	}
 }
+.team-content__member-wrapper {
+	height: 0;
+	overflow: hidden;
+	transition: .3s;
+}
 .team-content__member {
 	display: flex;
 	width: rem(335px);
-	height: 0;
-	overflow: hidden;
+	height: rem(120px);
+	/*overflow: hidden;*/
 	margin-top: rem(10px);
 
 
@@ -131,14 +137,19 @@
 	line-height: 1.5;
 
 	&_active {
-		min-height: rem(102px);
-		overflow: visible;
+		/*min-height: rem(102px);
+		overflow: visible;*/
 	}
 
 	@include tablet {
 		flex-direction: column;
 		align-items: center;
 		font-size: rem(16px);
+
+		height: rem(200px);
+	}
+	@include mobile {
+		height: rem(220px);
 	}
 }
 .team-content__member-content {
