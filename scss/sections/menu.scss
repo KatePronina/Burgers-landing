@@ -46,10 +46,10 @@
 		width: rem(50px);
 	}
 }
-.menu__element_active .menu__description {
+/*.menu__element_active .menu__description {
 	display: block;
 }
-
+*/
 .menu__link {
 	font-family: gagalinregular;
 	font-size: rem(40px);
@@ -66,9 +66,10 @@
 	}
 }
 .menu__description {
-	display: none;
+	/*display: none;*/
 
-	@include section-height;
+	/*@include section-height;*/
+	height: 100vh;
 	width: rem(545px);
 	margin: 0;
 	padding-top: rem(50px);
@@ -90,4 +91,9 @@
 	@include mobile {
 		width: 100%;
 	}
+}
+.menu__description-wrapper {
+	width: 0;
+	overflow: hidden;
+	transition: .3s;
 }

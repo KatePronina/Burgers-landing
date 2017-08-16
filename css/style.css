@@ -666,9 +666,10 @@ body {
     .menu__element-title {
       width: 3.125rem; } }
 
-.menu__element_active .menu__description {
-  display: block; }
-
+/*.menu__element_active .menu__description {
+	display: block;
+}
+*/
 .menu__link {
   font-family: gagalinregular;
   font-size: 2.5rem;
@@ -687,8 +688,9 @@ body {
       font-size: 1.875rem; } }
 
 .menu__description {
-  display: none;
-  min-height: 100vh;
+  /*display: none;*/
+  /*@include section-height;*/
+  height: 100vh;
   width: 34.0625rem;
   margin: 0;
   padding-top: 3.125rem;
@@ -708,6 +710,13 @@ body {
   @media (max-width: 480px) {
     .menu__description {
       width: 100%; } }
+
+.menu__description-wrapper {
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
 
 .feedback {
   min-height: 100vh;

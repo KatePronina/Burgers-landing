@@ -53,6 +53,42 @@ $(function () {
   })
 });
 
+// горизонтальный аккордеон в секции с меню
+
+$(function () {
+  $('.menu__link').on('click', function (e) {
+    e.preventDefault()
+
+    var elem = $(e.target),
+      item = elem.closest('.menu__element'),  // li
+      content = item.find('.menu__description-wrapper'), // обертка выпадашки
+      reqWidth = item.find('.menu__description').outerWidth(), // сама выпадашка
+      items = item.siblings(), // другие li-шки
+      otherContent = items.find('.menu__description-wrapper'); //другие обертки
+
+    if (!item.hasClass('menu__element_active')) {
+      items.removeClass('menu__element_active');
+      item.addClass('menu__element_active');
+
+      otherContent.css({
+        'width': 0
+      });
+
+      content.css({
+        'width': reqWidth
+      })
+    } else {
+      item.removeClass('menu__element_active')
+      content.css({
+        'width': 0
+      })
+    }
+  })
+});
+
+
+
+
 
 // карта
 
