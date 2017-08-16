@@ -86,6 +86,32 @@ $(function () {
   })
 });
 
+// всплывающее окно с отзывом
+
+$(function() {
+	var popupFeedback = $('.modal-feedback');
+	var openButton = $('.feedback__item-more');
+	var openButtonMobile = $('.feedback__item-more-adaptive')
+	var closeButton = $('.modal-feedback-content__btn');
+
+	openButton.on('click', function(e) {
+		e.preventDefault();
+
+		popupFeedback.fadeIn(300);
+	});
+
+	openButtonMobile.on('click', function(e) {
+		e.preventDefault();
+
+		popupFeedback.fadeIn(300);
+	});
+
+	closeButton.on('click', function(e) {
+		e.preventDefault();
+
+		popupFeedback.fadeOut(300);
+	});
+});
 
 
 

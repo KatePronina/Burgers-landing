@@ -1699,3 +1699,103 @@ body {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg); }
+
+.modal-feedback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(47, 50, 52, 0.9);
+  z-index: 60;
+  display: none; }
+
+.modal-feedback__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.modal-feedback-content {
+  position: relative;
+  max-width: 29.6875rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 1.375rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 2.5rem;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: 0.875rem; }
+  @media (max-width: 768px) {
+    .modal-feedback-content {
+      max-width: 25rem;
+      padding-top: 1.25rem;
+      padding-left: 1.125rem;
+      padding-right: 1.125rem;
+      padding-bottom: 1.875rem; } }
+  @media (max-width: 480px) {
+    .modal-feedback-content {
+      max-width: 23.75rem;
+      padding-top: 0.9375rem;
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+      padding-bottom: 1.25rem; } }
+
+.modal-feedback-content__name {
+  font-family: gagalinregular;
+  color: #2f3234;
+  line-height: 1.75rem; }
+
+.modal-feedback-content__text {
+  margin: 0;
+  padding-top: 1.25rem;
+  font-family: ubuntu;
+  font-weight: 300;
+  line-height: 1.5rem; }
+
+.modal-feedback-content__btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer; }
+  .modal-feedback-content__btn::before, .modal-feedback-content__btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5625rem;
+    width: 1.3125rem;
+    height: 0.1875rem;
+    border-radius: 1px;
+    background-color: #ec8468;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .modal-feedback-content__btn::after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  @media (max-width: 768px) {
+    .modal-feedback-content__btn {
+      top: 1.25rem;
+      right: 1.125rem; } }
+  @media (max-width: 480px) {
+    .modal-feedback-content__btn {
+      top: 0.9375rem;
+      right: 0.9375rem; } }
