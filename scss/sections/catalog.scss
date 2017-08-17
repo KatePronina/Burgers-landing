@@ -2,6 +2,7 @@
 	@include section-height;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 
 	background: linear-gradient(#f9b43b, #eb8d38, #f9b43b);
 
@@ -47,10 +48,27 @@
 		transform: rotate(-90deg);
 	}
 }
+.slider {
+	width: rem(935px);
+	min-height: rem(597px);
+	position: relative;
+	overflow: hidden;
+}
+.slider__list {
+	display: flex;
+	width: rem(935px);
+	height: rem(597px);
+
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 .product {
 	display: flex;
 	align-items: center;
-	margin-left: rem(15px);
+	width: rem(935px);
+	/*margin-left: rem(15px);*/
 
 	@include tablet {
 		flex-direction: column;
