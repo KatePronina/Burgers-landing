@@ -53,6 +53,11 @@
 	min-height: rem(597px);
 	position: relative;
 	overflow: hidden;
+
+	@include tablet {
+		width: rem(587px);
+		min-height: rem(760px);
+	}
 }
 .slider__list {
 	display: flex;
@@ -63,19 +68,25 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+
+	@include tablet {
+		width: rem(587px);
+		min-height: rem(760px);
+		padding-top: rem(50px);
+	}
 }
 .product {
 	display: flex;
 	align-items: center;
-	width: rem(935px);
+	min-width: 100%;
 	/*margin-left: rem(15px);*/
 
 	@include tablet {
 		flex-direction: column;
 		justify-content: center;
-		margin-left: rem(80px);
-		margin-right: rem(80px);
-		margin-top: rem(100px);
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: rem(0px);
 	}
 }
 .product__burger {
@@ -87,18 +98,22 @@
 
 	@include tablet {
 		height: rem(460px);
+		padding-top: rem(90px);
+		padding-left: rem(40px);
+		box-sizing: border-box;
 	}
 	@include mobile {
 		width: rem(400px);
 	}
 }
 .product__info {
-	max-width: rem(430px);
+	/*max-width: rem(430px);*/
 	min-height: rem(480px);
 	margin-left: rem(15px);
-	margin-right: rem(50px);
+	margin-right: rem(5px);
 
 	@include tablet {
+		max-width: rem(575px);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -154,6 +169,11 @@
 .product__burger-img {
 	width: rem(505px);
 	height: rem(329px);
+
+	@include tablet {
+		width: rem(455px);
+		height: rem(280px);
+	}
 
 	@include mobile {
 		width: rem(400px);

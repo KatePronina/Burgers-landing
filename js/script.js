@@ -1,9 +1,9 @@
 // всплывающее меню на мобильных устройствах
 
 $(function() {
-	var popupMenu = $('.mobile-menu');
-	var openButton = $('.header__menu-adaptive');
-	var closeButton = $('.mobile-menu__btn');
+	var popupMenu = $('.mobile-menu'),
+		openButton = $('.header__menu-adaptive'),
+		closeButton = $('.mobile-menu__btn');
 
 	openButton.on('click', function(e) {
 		e.preventDefault();
@@ -23,76 +23,76 @@ $(function() {
 // аккордеон в секции с командой
 
 $(function () {
-  $('.team-content__acc-link').on('click', function (e) {
-    e.preventDefault()
+	$('.team-content__acc-link').on('click', function (e) {
+    	e.preventDefault()
 
-    var elem = $(e.target),
-      item = elem.closest('.team-content__acc-element'),
-      content = item.find('.team-content__member-wrapper'),
-      reqHeight = item.find('.team-content__member').outerHeight(),
-      items = item.siblings(),
-      otherContent = items.find('.team-content__member-wrapper');
+    	var elem = $(e.target),
+      		item = elem.closest('.team-content__acc-element'),
+      		content = item.find('.team-content__member-wrapper'),
+      		reqHeight = item.find('.team-content__member').outerHeight(),
+      		items = item.siblings(),
+      		otherContent = items.find('.team-content__member-wrapper');
 
-    if (!item.hasClass('team-content__acc-element_active')) {
-      items.removeClass('team-content__acc-element_active');
-      item.addClass('team-content__acc-element_active');
+    	if (!item.hasClass('team-content__acc-element_active')) {
+      		items.removeClass('team-content__acc-element_active');
+      		item.addClass('team-content__acc-element_active');
 
-      otherContent.css({
-        'height': 0
-      });
+      		otherContent.css({
+        		'height': 0
+      		});
 
-      content.css({
-        'height': reqHeight
-      })
-    } else {
-      item.removeClass('team-content__acc-element_active')
-      content.css({
-        'height': 0
-      })
-    }
+      		content.css({
+        		'height': reqHeight
+      		})
+    	} else {
+      		item.removeClass('team-content__acc-element_active')
+      		content.css({
+        		'height': 0
+      		})
+    	}
   })
 });
 
 // горизонтальный аккордеон в секции с меню
 
 $(function () {
-  $('.menu__link').on('click', function (e) {
-    e.preventDefault()
+  	$('.menu__link').on('click', function (e) {
+    	e.preventDefault()
 
-    var elem = $(e.target),
-      item = elem.closest('.menu__element'),  // li
-      content = item.find('.menu__description-wrapper'), // обертка выпадашки
-      reqWidth = item.find('.menu__description').outerWidth(), // сама выпадашка
-      items = item.siblings(), // другие li-шки
-      otherContent = items.find('.menu__description-wrapper'); //другие обертки
+    	var elem = $(e.target),
+      		item = elem.closest('.menu__element'),  // li
+      		content = item.find('.menu__description-wrapper'), // обертка выпадашки
+      		reqWidth = item.find('.menu__description').outerWidth(), // сама выпадашка
+      		items = item.siblings(), // другие li-шки
+      		otherContent = items.find('.menu__description-wrapper'); //другие обертки
 
-    if (!item.hasClass('menu__element_active')) {
-      items.removeClass('menu__element_active');
-      item.addClass('menu__element_active');
+    	if (!item.hasClass('menu__element_active')) {
+      		items.removeClass('menu__element_active');
+      		item.addClass('menu__element_active');
 
-      otherContent.css({
-        'width': 0
-      });
+      		otherContent.css({
+        		'width': 0
+      		});
 
-      content.css({
-        'width': reqWidth
-      })
-    } else {
-      item.removeClass('menu__element_active')
-      content.css({
-        'width': 0
-      })
-    }
+      		content.css({
+        		'width': reqWidth
+      		})
+    	} else {
+      		item.removeClass('menu__element_active')
+      		content.css({
+        		'width': 0
+      		})
+    	}
   })
 });
 
 // всплывающее окно с отзывом
 
 $(function() {
-	var popupFeedback = $('.modal-feedback');
-	var openButton = $('.feedback__item-more');
-	var openButtonMobile = $('.feedback__item-more-adaptive')
-	var closeButton = $('.modal-feedback-content__btn');
+	var popupFeedback = $('.modal-feedback'),
+		openButton = $('.feedback__item-more'),
+		openButtonMobile = $('.feedback__item-more-adaptive'),
+		closeButton = $('.modal-feedback-content__btn');
 
 	openButton.on('click', function(e) {
 		e.preventDefault();
@@ -118,7 +118,64 @@ $(function() {
 // маска номера телефона
 
 $(function(){
-  $("#tel").mask("+7(999) 999-9999");
+	$("#tel").mask("+7(999) 999-9999");
+});
+
+// слайдер
+
+$(function() {
+
+	var moveSlide = function (slideNum) {
+		var $this = $(this),
+			container = $('.slider'),
+			items = container.find('.product'),
+			activeSlide = items.filter('.product_active'),
+			reqItem = items.eq(slideNum),
+			reqIndex = reqItem.index(),
+			list = container.find('.slider__list'), 
+			duration = 500;
+
+		if (reqItem.length) {
+			list.animate({
+				'left' : -reqIndex * 100 + '%'
+			}, duration, function () {
+				activeSlide.removeClass('product_active');
+				reqItem.addClass('product_active');
+			});
+		}
+	}
+
+	$('.catalog__arrow').on('click', function (e) {
+		e.preventDefault();
+
+		var container = $('.slider'),
+			items = container.find('.product');
+			activeItem = items.filter('.product_active'),
+			button = $(e.target),
+			existedItem, edgeItem, reqItem;
+
+		if (button.hasClass('catalog__arrow-next')) {
+
+			existedItem = activeItem.next();
+			edgeItem = items.first();
+
+		} 
+
+		if (button.hasClass('catalog__arrow-previous')) {
+
+			existedItem = activeItem.prev();
+			edgeItem = items.last();
+
+		}
+
+		reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+
+		moveSlide(reqItem);
+
+		
+
+	});
+
 });
 
 
@@ -139,7 +196,7 @@ function init(){
         hintContent: 'ул.Бабушкина, д.12/1, 15',
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '../img/i-map_marker.png',
+        iconImageHref: 'img/i-map_marker.png',
         iconImageSize: [46, 57]
     });
 
@@ -147,7 +204,7 @@ function init(){
         hintContent: 'ул.Бабушкина, д.12/1, 15'
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '../img/i-map_marker.png',
+        iconImageHref: 'img/i-map_marker.png',
         iconImageSize: [46, 57]
     });
 
@@ -155,7 +212,7 @@ function init(){
         hintContent: 'ул.Бабушкина, д.12/1, 15'
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '../img/i-map_marker.png',
+        iconImageHref: 'img/i-map_marker.png',
         iconImageSize: [46, 57]
     });
 
@@ -163,7 +220,7 @@ function init(){
         hintContent: 'ул.Бабушкина, д.12/1, 15'
     }, {
         iconLayout: 'default#image',
-        iconImageHref: '../img/i-map_marker.png',
+        iconImageHref: 'img/i-map_marker.png',
         iconImageSize: [46, 57]
     });
 
