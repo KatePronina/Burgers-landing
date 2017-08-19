@@ -62,7 +62,7 @@ $(function () {
     	var elem = $(e.target),
       		item = elem.closest('.menu__element'),  // li
       		content = item.find('.menu__description-wrapper'), // обертка выпадашки
-      		reqWidth = item.find('.menu__description').outerWidth(), // сама выпадашка
+      		reqWidth = $(window).width() - $(item).width() * 3, // сама выпадашка
       		items = item.siblings(), // другие li-шки
       		otherContent = items.find('.menu__description-wrapper'); //другие обертки
 

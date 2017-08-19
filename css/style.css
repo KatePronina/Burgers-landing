@@ -700,7 +700,7 @@ body {
   /*display: none;*/
   /*@include section-height;*/
   height: 100vh;
-  width: 34.0625rem;
+  max-width: 34.0625rem;
   margin: 0;
   padding-top: 3.125rem;
   padding-left: 2.1875rem;
@@ -715,10 +715,10 @@ body {
   line-height: 1.9; }
   @media (max-width: 768px) {
     .menu__description {
-      max-width: 25rem; } }
+      /*max-width: rem(400px);*/ } }
   @media (max-width: 480px) {
     .menu__description {
-      width: 100%; } }
+      /*width: 100%;*/ } }
 
 .menu__description-wrapper {
   width: 0;
