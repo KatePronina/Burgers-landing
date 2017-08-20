@@ -62,11 +62,15 @@ $(function () {
     	var elem = $(e.target),
       		item = elem.closest('.menu__element'),  // li
       		content = item.find('.menu__description-wrapper'), // обертка выпадашки
-      		reqWidth = $(window).width() - $(item).width() * 3, // сама выпадашка
+      		reqWidth = $(window).width() - $(item).width() * 3, 
       		items = item.siblings(), // другие li-шки
       		otherContent = items.find('.menu__description-wrapper'); //другие обертки
 
- 
+ 		if ($(window).width() > 850) {
+ 			reqWidth = item.find('.menu__description').outerWidth();
+ 		} else {
+ 			reqWidth = $(window).width() - $(item).width() * 3;
+ 		}
 
     	if (!item.hasClass('menu__element_active')) {
       		items.removeClass('menu__element_active');

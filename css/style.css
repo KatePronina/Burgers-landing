@@ -700,7 +700,7 @@ body {
   /*display: none;*/
   /*@include section-height;*/
   height: 100vh;
-  /*max-width: rem(545px);*/
+  width: 34.0625rem;
   margin: 0;
   padding-top: 3.125rem;
   padding-left: 2.1875rem;
@@ -713,12 +713,12 @@ body {
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.9; }
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     .menu__description {
-      /*width: auto;*/ } }
+      width: auto; } }
   @media (max-width: 480px) {
     .menu__description {
-      /*width: auto;*/ } }
+      width: auto; } }
 
 .menu__description-wrapper {
   width: 0;

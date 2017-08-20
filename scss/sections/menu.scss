@@ -73,7 +73,7 @@
 
 	/*@include section-height;*/
 	height: 100vh;
-	/*max-width: rem(545px);*/
+	width: rem(545px);
 	margin: 0;
 	padding-top: rem(50px);
 	padding-left: rem(35px);
@@ -88,11 +88,11 @@
 	font-size: rem(14px);
 	line-height: 1.9;
 
-	@include tablet  {
-		/*width: auto;*/
+	@media (max-width: 850px)  {
+		width: auto;
 	}
 	@include mobile {
-		/*width: auto;*/
+		width: auto;
 	}
 }
 .menu__description-wrapper {
