@@ -43,7 +43,7 @@
 	}
 }
 .delivery__form-part {
-	width: rem(464px);
+	width: 50%;
 	margin-right: rem(20px);
 
 	font-family: ubuntu, sans-serif;
@@ -57,6 +57,7 @@
 	}
 
 	@include tablet {
+		width: 100%;
 		margin-right: 0;
 	}
 
