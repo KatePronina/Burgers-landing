@@ -73,7 +73,7 @@
 
 	/*@include section-height;*/
 	height: 100vh;
-	max-width: rem(545px);
+	/*max-width: rem(545px);*/
 	margin: 0;
 	padding-top: rem(50px);
 	padding-left: rem(35px);
@@ -89,10 +89,10 @@
 	line-height: 1.9;
 
 	@include tablet  {
-		/*max-width: rem(400px);*/
+		/*width: auto;*/
 	}
 	@include mobile {
-		/*width: 100%;*/
+		/*width: auto;*/
 	}
 }
 .menu__description-wrapper {

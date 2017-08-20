@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Burgers</title>
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -77,171 +78,163 @@
 			</div>
 		</section>
 		<section class="catalog">
-			<div class="catalog__arrow catalog__arrow-previous">
-				<img src="img/arrow-scroll.svg" alt="Назад" class="catalog__arrow-img catalog__arrow-img_previous">
-			</div>
-			<div class="slider">
-				<div class="slider__list">
-					<div class="product product_active">
-					<div class="product__burger">
-						<div class="composition">
-							<b class="composition__name">Состав</b>
-							<div class="composition__ingredients">
-								<ul class="composition__ingredients-list">
-									<li class="composition__ingredients-item composition__ingredients-item_beef">
-										<span class="composition__ingredients-name">Говядина</span>
-										<span class="composition__ingredients-weight">300 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_buns">
-										<span class="composition__ingredients-name">Булочки</span>
-										<span class="composition__ingredients-weight">100 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_salad">
-										<span class="composition__ingredients-name">Зелень</span>
-										<span class="composition__ingredients-weight">70 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_sauce">
-										<span class="composition__ingredients-name">Соус</span>
-										<span class="composition__ingredients-weight">150 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_cucumber">
-										<span class="composition__ingredients-name">Овощи</span>
-										<span class="composition__ingredients-weight">200 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_cheese">
-										<span class="composition__ingredients-name">Сыр</span>
-										<span class="composition__ingredients-weight">80 г</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<img src="img/slider-img1.png" alt="Dark Beef" class="product__burger-img">
-						<div class="product__kkal">
-							<b class="product__kkal-number">1200</b>
-							<b class="product__kkal-name">ккал</b>
+			<div class="owl-carousel">
+				<div class="product">
+				<div class="product__burger">
+					<div class="composition">
+						<b class="composition__name">Состав</b>
+						<div class="composition__ingredients">
+							<ul class="composition__ingredients-list">
+								<li class="composition__ingredients-item composition__ingredients-item_beef">
+									<span class="composition__ingredients-name">Говядина</span>
+									<span class="composition__ingredients-weight">300 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_buns">
+									<span class="composition__ingredients-name">Булочки</span>
+									<span class="composition__ingredients-weight">100 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_salad">
+									<span class="composition__ingredients-name">Зелень</span>
+									<span class="composition__ingredients-weight">70 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_sauce">
+									<span class="composition__ingredients-name">Соус</span>
+									<span class="composition__ingredients-weight">150 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_cucumber">
+									<span class="composition__ingredients-name">Овощи</span>
+									<span class="composition__ingredients-weight">200 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_cheese">
+									<span class="composition__ingredients-name">Сыр</span>
+									<span class="composition__ingredients-weight">80 г</span>
+								</li>
+							</ul>
 						</div>
 					</div>
-					<div class="product__info">
-						<h2 class="product__info-name">Dark Beef Burger</h2>
-						<p class="product__info-description">
-							Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
-						</p>
-						<div class="product__info-order">
-							<b class="product__info-price">
-								<span class="product__info-number">500</span> рублей
-							</b>
-							<a href="#" class="product__info-order-btn">Заказать</a>
-						</div>
-					</div>
-					</div>
-					<div class="product">
-					<div class="product__burger">
-						<div class="composition">
-							<b class="composition__name">Состав</b>
-							<div class="composition__ingredients">
-								<ul class="composition__ingredients-list">
-									<li class="composition__ingredients-item composition__ingredients-item_beef">
-										<span class="composition__ingredients-name">Говядина</span>
-										<span class="composition__ingredients-weight">300 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_buns">
-										<span class="composition__ingredients-name">Булочки</span>
-										<span class="composition__ingredients-weight">100 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_salad">
-										<span class="composition__ingredients-name">Зелень</span>
-										<span class="composition__ingredients-weight">70 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_sauce">
-										<span class="composition__ingredients-name">Соус</span>
-										<span class="composition__ingredients-weight">150 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_cucumber">
-										<span class="composition__ingredients-name">Овощи</span>
-										<span class="composition__ingredients-weight">200 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_cheese">
-										<span class="composition__ingredients-name">Сыр</span>
-										<span class="composition__ingredients-weight">80 г</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<img src="img/slider-img3.png" alt="Dark Beef" class="product__burger-img">
-						<div class="product__kkal">
-							<b class="product__kkal-number">1200</b>
-							<b class="product__kkal-name">ккал</b>
-						</div>
-					</div>
-					<div class="product__info">
-						<h2 class="product__info-name">Dark Beef Burger</h2>
-						<p class="product__info-description">
-							Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
-						</p>
-						<div class="product__info-order">
-							<b class="product__info-price">
-								<span class="product__info-number">400</span> рублей
-							</b>
-							<a href="#" class="product__info-order-btn">Заказать</a>
-						</div>
-					</div>
-					</div>
-					<div class="product">
-					<div class="product__burger">
-						<div class="composition">
-							<b class="composition__name">Состав</b>
-							<div class="composition__ingredients">
-								<ul class="composition__ingredients-list">
-									<li class="composition__ingredients-item composition__ingredients-item_beef">
-										<span class="composition__ingredients-name">Говядина</span>
-										<span class="composition__ingredients-weight">300 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_buns">
-										<span class="composition__ingredients-name">Булочки</span>
-										<span class="composition__ingredients-weight">100 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_salad">
-										<span class="composition__ingredients-name">Зелень</span>
-										<span class="composition__ingredients-weight">70 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_sauce">
-										<span class="composition__ingredients-name">Соус</span>
-										<span class="composition__ingredients-weight">150 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_cucumber">
-										<span class="composition__ingredients-name">Овощи</span>
-										<span class="composition__ingredients-weight">200 г</span>
-									</li>
-									<li class="composition__ingredients-item composition__ingredients-item_cheese">
-										<span class="composition__ingredients-name">Сыр</span>
-										<span class="composition__ingredients-weight">80 г</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<img src="img/slider-img4.png" alt="Dark Beef" class="product__burger-img">
-						<div class="product__kkal">
-							<b class="product__kkal-number">1200</b>
-							<b class="product__kkal-name">ккал</b>
-						</div>
-					</div>
-					<div class="product__info">
-						<h2 class="product__info-name">Dark Beef Burger</h2>
-						<p class="product__info-description">
-							Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
-						</p>
-						<div class="product__info-order">
-							<b class="product__info-price">
-								<span class="product__info-number">300</span> рублей
-							</b>
-							<a href="#" class="product__info-order-btn">Заказать</a>
-						</div>
-					</div>
+					<img src="img/slider-img1.png" alt="Dark Beef" class="product__burger-img">
+					<div class="product__kkal">
+						<b class="product__kkal-number">1200</b>
+						<b class="product__kkal-name">ккал</b>
 					</div>
 				</div>
-			</div>
-			<div class="catalog__arrow catalog__arrow-next">
-				<img src="img/arrow-scroll.svg" alt="Вперед" class="catalog__arrow-img catalog__arrow-img_next">
+				<div class="product__info">
+					<h2 class="product__info-name">Dark Beef Burger</h2>
+					<p class="product__info-description">
+						Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+					</p>
+					<div class="product__info-order">
+						<b class="product__info-price">
+							<span class="product__info-number">500</span> рублей
+						</b>
+						<a href="#" class="product__info-order-btn">Заказать</a>
+					</div>
+				</div>
+				</div>
+				<div class="product">
+				<div class="product__burger">
+					<div class="composition">
+						<b class="composition__name">Состав</b>
+						<div class="composition__ingredients">
+							<ul class="composition__ingredients-list">
+								<li class="composition__ingredients-item composition__ingredients-item_beef">
+									<span class="composition__ingredients-name">Говядина</span>
+									<span class="composition__ingredients-weight">300 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_buns">
+									<span class="composition__ingredients-name">Булочки</span>
+									<span class="composition__ingredients-weight">100 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_salad">
+									<span class="composition__ingredients-name">Зелень</span>
+									<span class="composition__ingredients-weight">70 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_sauce">
+									<span class="composition__ingredients-name">Соус</span>
+									<span class="composition__ingredients-weight">150 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_cucumber">
+									<span class="composition__ingredients-name">Овощи</span>
+									<span class="composition__ingredients-weight">200 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_cheese">
+									<span class="composition__ingredients-name">Сыр</span>
+									<span class="composition__ingredients-weight">80 г</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<img src="img/slider-img3.png" alt="Dark Beef" class="product__burger-img">
+					<div class="product__kkal">
+						<b class="product__kkal-number">1200</b>
+						<b class="product__kkal-name">ккал</b>
+					</div>
+				</div>
+				<div class="product__info">
+					<h2 class="product__info-name">Fish Delight Burger</h2>
+					<p class="product__info-description">
+						Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+					</p>
+					<div class="product__info-order">
+						<b class="product__info-price">
+							<span class="product__info-number">400</span> рублей
+						</b>
+						<a href="#" class="product__info-order-btn">Заказать</a>
+					</div>
+				</div>
+				</div>
+				<div class="product">
+				<div class="product__burger">
+					<div class="composition">
+						<b class="composition__name">Состав</b>
+						<div class="composition__ingredients">
+							<ul class="composition__ingredients-list">
+								<li class="composition__ingredients-item composition__ingredients-item_beef">
+									<span class="composition__ingredients-name">Говядина</span>
+									<span class="composition__ingredients-weight">300 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_buns">
+									<span class="composition__ingredients-name">Булочки</span>
+									<span class="composition__ingredients-weight">100 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_salad">
+									<span class="composition__ingredients-name">Зелень</span>
+									<span class="composition__ingredients-weight">70 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_sauce">
+									<span class="composition__ingredients-name">Соус</span>
+									<span class="composition__ingredients-weight">150 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_cucumber">
+									<span class="composition__ingredients-name">Овощи</span>
+									<span class="composition__ingredients-weight">200 г</span>
+								</li>
+								<li class="composition__ingredients-item composition__ingredients-item_cheese">
+									<span class="composition__ingredients-name">Сыр</span>
+									<span class="composition__ingredients-weight">80 г</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<img src="img/slider-img4.png" alt="Dark Beef" class="product__burger-img">
+					<div class="product__kkal">
+						<b class="product__kkal-number">1200</b>
+						<b class="product__kkal-name">ккал</b>
+					</div>
+				</div>
+				<div class="product__info">
+					<h2 class="product__info-name">Mushroom Beef Burger</h2>
+					<p class="product__info-description">
+						Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+					</p>
+					<div class="product__info-order">
+						<b class="product__info-price">
+							<span class="product__info-number">300</span> рублей
+						</b>
+						<a href="#" class="product__info-order-btn">Заказать</a>
+					</div>
+				</div>
+				</div>
 			</div>
 		</section>
 		<section class="team">
@@ -431,40 +424,40 @@
 		<section class="delivery">
 			<div class="delivery__container">
 				<h1 class="delivery__title">Закажите доставку</h1>
-				<form action="#" class="delivery__form">
+				<form action="server.php" method="post" class="delivery__form" id="order-form">
 					<div class="delivery__form-part">
 						<div class="delivery__form-row">
 							<div class="delivery__input-block">
 								<label for="name" class="delivery__input-label">Имя</label>
-								<input type="text" id="name" class="delivery__form-input">
+								<input type="text" id="name" class="delivery__form-input" name="name">
 							</div>
 							<div class="delivery__input-block">
 								<label for="tel" class="delivery__input-label">Телефон</label>	
-								<input type="text" id="tel" class="delivery__form-input">
+								<input type="text" id="tel" class="delivery__form-input" name="tel">
 							</div>	
 						</div>
 						<div class="delivery__form-row">
 							<div class="delivery__input-block">
 								<label for="street" class="delivery__input-label">Улица</label>
-								<input type="text" id="street" class="delivery__form-input">
+								<input type="text" id="street" class="delivery__form-input" name="street">
 							</div>	
 						</div>
 						<div class="delivery__form-row">
 							<div class="delivery__input-block">
 								<label for="house" class="delivery__input-label">Дом</label>
-								<input type="text" id="house" class="delivery__form-input delivery__form-input_houses">
+								<input type="text" id="house" name="house" class="delivery__form-input delivery__form-input_houses">
 							</div>
 							<div class="delivery__input-block">
 								<label for="housing" class="delivery__input-label">Корпус</label>		
-								<input type="text" id="housing" class="delivery__form-input delivery__form-input_houses">
+								<input type="text" id="housing" name="housing" class="delivery__form-input delivery__form-input_houses">
 							</div>
 							<div class="delivery__input-block">
 								<label for="apartment" class="delivery__input-label">Квартира</label>	
-								<input type="text" id="apartment" class="delivery__form-input delivery__form-input_houses">
+								<input type="text" id="apartment" name="apartment" class="delivery__form-input delivery__form-input_houses">
 							</div>	
 							<div class="delivery__input-block">
 								<label for="floor" class="delivery__input-label">Этаж</label>
-								<input type="text" id="floor" class="delivery__form-input delivery__form-input_houses">
+								<input type="text" id="floor" name="floor" class="delivery__form-input delivery__form-input_houses">
 							</div>	
 						</div>
 					</div>
@@ -472,7 +465,7 @@
 						<div class="delivery__form-row">
 							<div class="delivery__comment-block">
 								<label for="comment" class="delivery__comment-label">Комментарий</label>
-								<textarea name="comment" id="comment" class="delivery__form-comment"></textarea>
+								<textarea name="comment" id="comment" name="comment" class="delivery__form-comment"></textarea>
 							</div>	
 						</div>
 						<div class="delivery__form-row">
@@ -482,7 +475,7 @@
 								<label for="card-pay" class="delivery__payment-label delivery__payment-label_radio">Оплата по карте</label>
 						</div>
 						<div class="delivery__form-row">
-							<input type="checkbox" id="not-call" class="delivery__payment-input">
+							<input type="checkbox" id="not-call" class="delivery__payment-input" name="not-call" value="1">
 								<label for="not-call" class="delivery__payment-label delivery__payment-label_box">Не перезванивать</label>
 						</div>
 						<div class="delivery__form-row">
@@ -583,6 +576,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	<script src="js/maskedinput.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/script.js"></script>
 
 </body>

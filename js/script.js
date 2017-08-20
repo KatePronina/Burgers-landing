@@ -66,6 +66,8 @@ $(function () {
       		items = item.siblings(), // другие li-шки
       		otherContent = items.find('.menu__description-wrapper'); //другие обертки
 
+ 
+
     	if (!item.hasClass('menu__element_active')) {
       		items.removeClass('menu__element_active');
       		item.addClass('menu__element_active');
@@ -123,60 +125,68 @@ $(function(){
 
 // слайдер
 
-$(function() {
+$(".owl-carousel").owlCarousel({
+	items : 1,
+	loop : true,
+	nav: true,
+	navText: [],
+	dots: false
+});
 
-	var moveSlide = function (slideNum) {
-		var $this = $(this),
-			container = $('.slider'),
-			items = container.find('.product'),
-			activeSlide = items.filter('.product_active'),
-			reqItem = items.eq(slideNum),
-			reqIndex = reqItem.index(),
-			list = container.find('.slider__list'), 
-			duration = 500;
+// $(function() {
 
-		if (reqItem.length) {
-			list.animate({
-				'left' : -reqIndex * 100 + '%'
-			}, duration, function () {
-				activeSlide.removeClass('product_active');
-				reqItem.addClass('product_active');
-			});
-		}
-	}
+// 	var moveSlide = function (slideNum) {
+// 		var $this = $(this),
+// 			container = $('.slider'),
+// 			items = container.find('.product'),
+// 			activeSlide = items.filter('.product_active'),
+// 			reqItem = items.eq(slideNum),
+// 			reqIndex = reqItem.index(),
+// 			list = container.find('.slider__list'), 
+// 			duration = 500;
 
-	$('.catalog__arrow').on('click', function (e) {
-		e.preventDefault();
+// 		if (reqItem.length) {
+// 			list.animate({
+// 				'left' : -reqIndex * 100 + '%'
+// 			}, duration, function () {
+// 				activeSlide.removeClass('product_active');
+// 				reqItem.addClass('product_active');
+// 			});
+// 		}
+// 	}
 
-		var container = $('.slider'),
-			items = container.find('.product');
-			activeItem = items.filter('.product_active'),
-			button = $(e.target),
-			existedItem, edgeItem, reqItem;
+// 	$('.catalog__arrow').on('click', function (e) {
+// 		e.preventDefault();
 
-		if (button.hasClass('catalog__arrow-next')) {
+// 		var container = $('.slider'),
+// 			items = container.find('.product');
+// 			activeItem = items.filter('.product_active'),
+// 			button = $(e.target),
+// 			existedItem, edgeItem, reqItem;
 
-			existedItem = activeItem.next();
-			edgeItem = items.first();
+// 		if (button.hasClass('catalog__arrow-next')) {
 
-		} 
+// 			existedItem = activeItem.next();
+// 			edgeItem = items.first();
 
-		if (button.hasClass('catalog__arrow-previous')) {
+// 		} 
 
-			existedItem = activeItem.prev();
-			edgeItem = items.last();
+// 		if (button.hasClass('catalog__arrow-previous')) {
 
-		}
+// 			existedItem = activeItem.prev();
+// 			edgeItem = items.last();
 
-		reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+// 		}
 
-		moveSlide(reqItem);
+// 		reqItem = existedItem.length ? existedItem.index() : edgeItem.index();
+
+// 		moveSlide(reqItem);
 
 		
 
-	});
+// 	});
 
-});
+// });
 
 
 

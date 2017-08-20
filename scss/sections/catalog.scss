@@ -6,87 +6,58 @@
 
 	background: linear-gradient(#f9b43b, #eb8d38, #f9b43b);
 
-	@include tablet {
-		position: relative;
-	}
-}
-.catalog__arrow-previous,
-.catalog__arrow-next {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	@include tablet {
-		position: absolute;
-		top: 50%;
-	}
-
-	@include mobile {
-		top: rem(500px);
-	}
-}
-.catalog__arrow-previous {
-	@include tablet {
-		left: 5%;
-	}
-} 
-.catalog__arrow-next {
-	@include tablet {
-		right: 5%;
-	}
-} 
-.catalog__arrow-img {
-	width: rem(25px);
-	height: rem(35px);
-	cursor: pointer;
-
-	&_previous {
-		transform: rotate(90deg);
-	}
-
-	&_next {
-		transform: rotate(-90deg);
-	}
-}
-.slider {
-	width: rem(935px);
-	min-height: rem(597px);
 	position: relative;
-	overflow: hidden;
+	
+}
 
-	@include tablet {
-		width: rem(587px);
-		min-height: rem(760px);
+.owl-prev, 
+.owl-next {
+ 	position: absolute;
+ 	width: rem(29px);
+ 	height: rem(14px);
+ 	background-image: url("../img/arrow-scroll.svg") !important;
+ 	background-position: center !important;
+ 	background-repeat: no-repeat !important;
+    background-size: contain !important;
+    top: 50%;
+
+    transform: rotate(-90deg);
+
+    @include mobile {
+		top: 45%;
 	}
 }
-.slider__list {
-	display: flex;
-	width: rem(935px);
-	height: rem(597px);
-
-
-	position: absolute;
-	top: 0;
-	left: 0;
+.owl-prev {
+	transform: rotate(90deg);
+	left: -10%;
 
 	@include tablet {
-		width: rem(587px);
-		min-height: rem(760px);
-		padding-top: rem(50px);
+		left: 2%;
 	}
+}
+.owl-next {
+	transform: rotate(-90deg);
+	right: -10%;
+
+	@include tablet {
+		right: 2%;
+	}
+}
+.owl-carousel {
+	max-width: rem(980px);
 }
 .product {
 	display: flex;
 	align-items: center;
-	min-width: 100%;
-	/*margin-left: rem(15px);*/
+	margin-left: rem(15px);
+	
 
 	@include tablet {
 		flex-direction: column;
 		justify-content: center;
-		margin-left: 0;
-		margin-right: 0;
-		margin-top: rem(0px);
+		margin-left: rem(80px);
+		margin-right: rem(80px);
+		margin-top: rem(100px);
 	}
 }
 .product__burger {
@@ -98,22 +69,18 @@
 
 	@include tablet {
 		height: rem(460px);
-		padding-top: rem(90px);
-		padding-left: rem(40px);
-		box-sizing: border-box;
 	}
 	@include mobile {
 		width: rem(400px);
 	}
 }
 .product__info {
-	/*max-width: rem(430px);*/
+	max-width: rem(430px);
 	min-height: rem(480px);
 	margin-left: rem(15px);
-	margin-right: rem(5px);
+	margin-right: rem(50px);
 
 	@include tablet {
-		max-width: rem(575px);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -169,11 +136,6 @@
 .product__burger-img {
 	width: rem(505px);
 	height: rem(329px);
-
-	@include tablet {
-		width: rem(455px);
-		height: rem(280px);
-	}
 
 	@include mobile {
 		width: rem(400px);
