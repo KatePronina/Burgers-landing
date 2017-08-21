@@ -300,6 +300,13 @@ body {
       margin-top: 5.3125rem;
       padding-bottom: 2.1875rem; } }
 
+.scroll-down__link {
+  width: 1.8125rem;
+  height: 0.875rem;
+  background-image: url("../img/arrow-scroll.svg");
+  background-repeat: no-repeat;
+  background-position: center; }
+
 .advantages {
   min-height: 100vh;
   background-color: #f5f2ed;
@@ -786,7 +793,6 @@ body {
   padding-top: 2.5rem;
   padding-left: 1.25rem;
   padding-right: 1.875rem;
-  /*padding-bottom: rem(50px);*/
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.5);
@@ -813,6 +819,10 @@ body {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem;
       text-align: center; } }
+  @media (max-width: 584px) {
+    .feedback__item-content {
+      padding-left: 0;
+      padding-right: 0; } }
   @media (max-width: 480px) {
     .feedback__item-content {
       width: 100%;
@@ -838,6 +848,10 @@ body {
   @media (max-width: 768px) {
     .feedback__item-name {
       line-height: 1.125rem; } }
+  @media (max-width: 584px) {
+    .feedback__item-name {
+      font-size: 0.8125rem;
+      line-height: 0.9375rem; } }
   @media (max-width: 480px) {
     .feedback__item-name {
       display: block;
@@ -856,6 +870,9 @@ body {
       margin-top: 0.625rem;
       margin-bottom: 0.625rem;
       line-height: 1.25rem; } }
+  @media (max-width: 584px) {
+    .feedback__item-text {
+      line-height: 0.9375rem; } }
   @media (max-width: 480px) {
     .feedback__item-text {
       display: none; } }

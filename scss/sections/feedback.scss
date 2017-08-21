@@ -32,7 +32,6 @@
 	padding-top: rem(40px);
 	padding-left: rem(20px);
 	padding-right: rem(30px);
-	/*padding-bottom: rem(50px);*/
 	box-sizing: border-box;
 
 	background-color: rgba(0, 0, 0, .5);
@@ -59,6 +58,11 @@
 		text-align: center;
 	}
 
+	@media (max-width: 584px) {
+		padding-left: 0;
+		padding-right: 0;
+	} 
+
 	@include mobile {
 		width: 100%;
 		display: flex;
@@ -75,6 +79,12 @@
 	@include tablet {
 		line-height: rem(18px);
 	}
+
+	@media (max-width: 584px) {
+		font-size: rem(13px);
+		line-height: rem(15px);
+	}
+
 	@include mobile {
 		display: block;
 		font-size: rem(24px);
@@ -93,6 +103,10 @@
 		margin-top: rem(10px);
 		margin-bottom: rem(10px);
 		line-height: rem(20px);
+	}
+
+	@media (max-width: 584px) {
+		line-height: rem(15px);
 	}
 
 	@include mobile {
