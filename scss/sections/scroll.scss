@@ -29,9 +29,13 @@
 	height: 6px;
 	border-radius: 50%;
 
-	&_active,
+	/*&_active,*/
 	&:hover {
 		border: 1px solid #ffffff;
 		padding: 4px;
 	}
+}
+.scroll-bar__elem_active .scroll-bar__item {
+	border: 1px solid #ffffff;
+	padding: 4px;
 }

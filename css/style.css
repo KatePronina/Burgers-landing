@@ -47,12 +47,28 @@ body {
   margin: 0;
   padding: 0;
   color: #2f3234;
-  line-height: 1.4; }
+  line-height: 1.4;
+  /*height: 100%;*/
+  overflow: hidden; }
+  @media (max-width: 900px) {
+    body {
+      overflow: visible; } }
 
 .wrapper {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden; }
+
+.main-sections {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  will-change: transform; }
 
 /*sections*/
 .scroll-bar {
@@ -82,10 +98,15 @@ body {
   background-color: #ffffff;
   width: 6px;
   height: 6px;
-  border-radius: 50%; }
-  .scroll-bar__item_active, .scroll-bar__item:hover {
+  border-radius: 50%;
+  /*&_active,*/ }
+  .scroll-bar__item:hover {
     border: 1px solid #ffffff;
     padding: 4px; }
+
+.scroll-bar__elem_active .scroll-bar__item {
+  border: 1px solid #ffffff;
+  padding: 4px; }
 
 .first-screen {
   background-color: #000000;
@@ -207,7 +228,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  @media (max-width: 950px) {
+  @media (max-width: 900px) {
     .main-content {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -715,7 +736,7 @@ body {
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.9; }
-  @media (max-width: 850px) {
+  @media (max-width: 800px) {
     .menu__description {
       width: auto; } }
   @media (max-width: 480px) {

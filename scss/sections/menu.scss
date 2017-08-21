@@ -88,7 +88,7 @@
 	font-size: rem(14px);
 	line-height: 1.9;
 
-	@media (max-width: 850px)  {
+	@media (max-width: 800px)  {
 		width: auto;
 	}
 	@include mobile {
