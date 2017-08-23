@@ -247,6 +247,10 @@ body {
     .main-content__image img {
       width: 26.3125rem;
       height: 24.375rem; } }
+  @media (max-width: 350px) {
+    .main-content__image img {
+      width: 23.125rem;
+      height: 21.25rem; } }
 
 .main-content__text {
   max-width: 26.5625rem;
@@ -259,7 +263,7 @@ body {
     .main-content__text {
       margin-top: 3.125rem;
       margin-left: 0;
-      width: 26.3125rem; } }
+      max-width: 26.3125rem; } }
   @media (max-width: 480px) {
     .main-content__text {
       margin-left: 0; } }
@@ -284,6 +288,9 @@ body {
   @media (max-width: 768px) {
     .main-content__text-second {
       font-size: 3.5625rem; } }
+  @media (max-width: 480px) {
+    .main-content__text-second {
+      font-size: 3.375rem; } }
 
 .scroll-down {
   display: -webkit-box;

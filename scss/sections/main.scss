@@ -120,6 +120,11 @@
 		width: rem(421px);
 		height: rem(390px);
 	}
+
+	@media (max-width: 350px) {
+		width: rem(370px);
+		height: rem(340px);
+	}
 }
 .main-content__text {
 	max-width: rem(425px);
@@ -133,7 +138,7 @@
 	@include tablet {
 		margin-top: rem(50px);
 		margin-left: 0;
-		width: rem(421px);
+		max-width: rem(421px);
 	}
 
 	@include mobile {
@@ -155,6 +160,10 @@
 
 	@include tablet {
 		font-size: rem(57px);
+	}
+
+	@include mobile {
+		font-size: rem(54px);
 	}
 }
 .scroll-down {
